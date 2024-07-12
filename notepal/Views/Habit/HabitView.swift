@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import UIKit
 
 struct HabitView: View {
     @Environment(\.modelContext) var modelContext

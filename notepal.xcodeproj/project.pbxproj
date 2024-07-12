@@ -11,6 +11,22 @@
 		730DC5CE2C411D840093F816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DC5CD2C411D840093F816 /* ContentView.swift */; };
 		730DC5D02C411D860093F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5CF2C411D860093F816 /* Assets.xcassets */; };
 		730DC5D42C411D860093F816 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5D32C411D860093F816 /* Preview Assets.xcassets */; };
+		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
+		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
+		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
+		EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */; };
+		EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCC2C4129D200C8D119 /* HabitModel.swift */; };
+		EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCD2C4129D200C8D119 /* NoteModel.swift */; };
+		EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCE2C4129D200C8D119 /* FolderModel.swift */; };
+		EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */; };
+		EF776D142C412AB800C8D119 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D122C412AB800C8D119 /* HabitView.swift */; };
+		EF776D152C412AB800C8D119 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D132C412AB800C8D119 /* HabitViewModel.swift */; };
+		EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D172C412AF700C8D119 /* HabitCard.swift */; };
+		EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D182C412AF700C8D119 /* FolderCard.swift */; };
+		EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1B2C412B0F00C8D119 /* NoteView.swift */; };
+		EF776D1E2C412B0F00C8D119 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */; };
+		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
+		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +36,23 @@
 		730DC5CF2C411D860093F816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		730DC5D12C411D860093F816 /* notepal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepal.entitlements; sourceTree = "<group>"; };
 		730DC5D32C411D860093F816 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
+		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
+		EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCategoryModel.swift; sourceTree = "<group>"; };
+		EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitLogModel.swift; sourceTree = "<group>"; };
+		EF776CCC2C4129D200C8D119 /* HabitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
+		EF776CCD2C4129D200C8D119 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		EF776CCE2C4129D200C8D119 /* FolderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
+		EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleCheckboxStyle.swift; sourceTree = "<group>"; };
+		EF776D122C412AB800C8D119 /* HabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		EF776D132C412AB800C8D119 /* HabitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
+		EF776D172C412AF700C8D119 /* HabitCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+		EF776D182C412AF700C8D119 /* FolderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
+		EF776D1B2C412B0F00C8D119 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
+		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +85,10 @@
 		730DC5CA2C411D840093F816 /* notepal */ = {
 			isa = PBXGroup;
 			children = (
+				EF776CC42C41268B00C8D119 /* Info.plist */,
+				EF776CC02C41260200C8D119 /* Configs */,
+				EF776CBE2C4125C400C8D119 /* Models */,
+				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
@@ -67,6 +104,83 @@
 				730DC5D32C411D860093F816 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF776CBE2C4125C400C8D119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF776CC82C4129D200C8D119 /* ChecklistModel.swift */,
+				EF776CCE2C4129D200C8D119 /* FolderModel.swift */,
+				EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */,
+				EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */,
+				EF776CCC2C4129D200C8D119 /* HabitModel.swift */,
+				EF776CC92C4129D200C8D119 /* NoteLogModel.swift */,
+				EF776CCD2C4129D200C8D119 /* NoteModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF776CBF2C4125CA00C8D119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D0D2C412A2300C8D119 /* Habit */,
+				EF776D0F2C412A2300C8D119 /* Note */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF776CC02C41260200C8D119 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				EF776CC12C41260800C8D119 /* Styles */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		EF776CC12C41260800C8D119 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		EF776D0C2C412A2300C8D119 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D182C412AF700C8D119 /* FolderCard.swift */,
+				EF776D172C412AF700C8D119 /* HabitCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF776D0D2C412A2300C8D119 /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D0C2C412A2300C8D119 /* Components */,
+				EF776D122C412AB800C8D119 /* HabitView.swift */,
+				EF776D132C412AB800C8D119 /* HabitViewModel.swift */,
+			);
+			path = Habit;
+			sourceTree = "<group>";
+		};
+		EF776D0E2C412A2300C8D119 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */,
+				EF776D202C412B1C00C8D119 /* TextView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF776D0F2C412A2300C8D119 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D0E2C412A2300C8D119 /* Components */,
+				EF776D1B2C412B0F00C8D119 /* NoteView.swift */,
+				EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */,
+			);
+			path = Note;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +253,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF776D1E2C412B0F00C8D119 /* NoteViewModel.swift in Sources */,
+				EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */,
+				EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */,
+				EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */,
+				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
+				EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */,
 				730DC5CE2C411D840093F816 /* ContentView.swift in Sources */,
+				EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */,
+				EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */,
+				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
+				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
+				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
+				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
+				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
+				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
+				EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */,
+				EF776D152C412AB800C8D119 /* HabitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +404,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notepal/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +443,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notepal/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
