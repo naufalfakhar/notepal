@@ -83,3 +83,15 @@ struct HabitView: View {
     }
 }
 
+#Preview {
+    HabitView()
+        .modelContainer(for: [
+            Note.self,
+            NoteLog.self,
+            HabitCategory.self,
+            Habit.self,
+            HabitLog.self,
+            Folder.self,
+            Checklist.self,
+        ])
+}

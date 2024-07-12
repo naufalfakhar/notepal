@@ -48,7 +48,7 @@ class HabitManager: ObservableObject {
         do {
             let habits: [Habit] = try modelContext.fetch(FetchDescriptor<Habit>())
             
-            let habitNameLogs = habits.map { $0.name }
+            let habitNameLogs = habits.map { $0.title }
             let habitCompleteLogs = habits.map { $0.isCompleted }
             
             // Create a new log

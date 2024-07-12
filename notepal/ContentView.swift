@@ -9,13 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack{
+                List{
+                    Section{
+                        NavigationLink{
+                            // code here
+                        }label:{
+                            HStack{
+                                Image(systemName: "folder")
+                                Text("Regular Notes")
+                            }
+                        }
+                    }
+                    
+                    Section{
+                        NavigationLink{
+                            HabitView()
+                        }label:{
+                            HStack{
+                                Image(systemName: "folder")
+                                Text("Habit Journey")
+                            }
+                        }
+                    }
+                }            
+                .listSectionSpacing(.compact)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                   HStack {
+                       Text("NotePal")
+                           .bold()
+                           .font(.largeTitle)
+                           .padding(.leading)
+                       Spacer()
+                   }
+               }
+            }
         }
-        .padding()
     }
 }
 
