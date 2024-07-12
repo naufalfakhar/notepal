@@ -8,7 +8,6 @@
 //
 import Foundation
 import SwiftData
-import UIKit
 
 extension NSMutableAttributedString {
     func toData() -> Data? {

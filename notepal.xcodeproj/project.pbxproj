@@ -27,6 +27,9 @@
 		EF776D1E2C412B0F00C8D119 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */; };
 		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
 		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
+		EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D242C412BB200C8D119 /* HabitManager.swift */; };
+		EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */; };
+		EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D282C412D5B00C8D119 /* SpeechButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
 		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		EF776D242C412BB200C8D119 /* HabitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitManager.swift; sourceTree = "<group>"; };
+		EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		EF776D282C412D5B00C8D119 /* SpeechButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				EF776CC42C41268B00C8D119 /* Info.plist */,
 				EF776CC02C41260200C8D119 /* Configs */,
 				EF776CBE2C4125C400C8D119 /* Models */,
+				EF776D232C412BA200C8D119 /* Tools */,
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
@@ -148,6 +155,7 @@
 		EF776D0C2C412A2300C8D119 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EF776D282C412D5B00C8D119 /* SpeechButton.swift */,
 				EF776D182C412AF700C8D119 /* FolderCard.swift */,
 				EF776D172C412AF700C8D119 /* HabitCard.swift */,
 			);
@@ -181,6 +189,15 @@
 				EF776D1C2C412B0F00C8D119 /* NoteViewModel.swift */,
 			);
 			path = Note;
+			sourceTree = "<group>";
+		};
+		EF776D232C412BA200C8D119 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EF776D242C412BB200C8D119 /* HabitManager.swift */,
+				EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +273,10 @@
 				EF776D1E2C412B0F00C8D119 /* NoteViewModel.swift in Sources */,
 				EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */,
 				EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */,
+				EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */,
 				EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */,
+				EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */,
+				EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */,
 				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
 				EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */,
 				730DC5CE2C411D840093F816 /* ContentView.swift in Sources */,

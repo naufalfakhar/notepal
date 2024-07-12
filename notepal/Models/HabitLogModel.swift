@@ -1,23 +1,24 @@
 //
-//  HabitLogModel.swift
-//  notes
+//  HabitLog.swift
+//  HabitDaily
 //
-//  Created by Dason Tiovino on 09/07/24.
+//  Created by Hansen Yudistira on 10/07/24.
 //
 
 import Foundation
 import SwiftData
 
 @Model
-class HabitLog: Identifiable{
+class HabitLog: Identifiable {
     var id: UUID
-    var data: Habit
-    var createdAt: Date
+    var date: Date
+    var habitNameLogs: [String]
+    var habitCompleteLogs: [Bool]
     
-    init(id: UUID, data: Habit, createdAt: Date) {
+    init(id: UUID = UUID(), date: Date, habitNameLogs: [String] = [], habitCompleteLogs: [Bool] = []) {
         self.id = id
-        self.data = data
-        self.createdAt = createdAt
+        self.date = date
+        self.habitNameLogs = habitNameLogs
+        self.habitCompleteLogs = habitCompleteLogs
     }
 }
-
