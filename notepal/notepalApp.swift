@@ -12,6 +12,14 @@ struct notepalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.modelContainer(for: [
+            Note.self,
+            NoteLog.self,
+            HabitCategory.self,
+            Habit.self,
+            HabitLog.self,
+            Folder.self,
+            Checklist.self,
+        ])
     }
 }
