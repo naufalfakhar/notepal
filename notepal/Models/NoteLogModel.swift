@@ -15,7 +15,7 @@ extension NSMutableAttributedString {
     }
 
     static func fromData(_ data: Data) -> NSMutableAttributedString? {
-        try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? NSMutableAttributedString
+        try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSMutableAttributedString.self, from: data)
     }
 }
 

@@ -13,14 +13,15 @@ class NoteViewModel: Observable{
     var modelContext: ModelContext? = nil
     var data: [Habit] = []
     
-    func fetchData(){
-        do {
-            let descriptor = FetchDescriptor<Habit>(sortBy: [SortDescriptor(\.title)])
-            data = (try? (modelContext?.fetch(descriptor) ?? []))!
-        } catch {
+    func fetchData() {
+        let descriptor = FetchDescriptor<Habit>(sortBy: [SortDescriptor(\.title)])
+        if let fetchedData = try? modelContext?.fetch(descriptor) {
+            data = fetchedData
+        } else {
             print("Fetch failed")
         }
     }
+
     
     func addHabit(){
         let newHabit = Habit(
