@@ -13,5 +13,7 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

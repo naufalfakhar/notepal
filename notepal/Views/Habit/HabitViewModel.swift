@@ -14,11 +14,13 @@ class HabitViewModel{
     var modelContext: ModelContext? = nil
     
     var folderData: [Folder] = []
-    var data: [Habit] = []
+    var habitData: [Habit] = []
     
     func fetchHabitData(){
         let descriptor = FetchDescriptor<Habit>(sortBy: [SortDescriptor(\.title)])
-        data = (try? (modelContext?.fetch(descriptor) ?? []))!
+        habitData = (try? (modelContext?.fetch(descriptor) ?? []))!
+        
+        print(habitData)
     }
     
     func fetchFolderData(){
@@ -53,17 +55,18 @@ class HabitViewModel{
         fetchHabitData()
     }
     
-    func addHabitToRandomFolder(){
-        data.last?.folderId = folderData.randomElement()?.id
-        try? modelContext?.save()
-        fetchFolderData()
-        fetchHabitData()
-    }
+//    func addHabitToRandomFolder(){
+//        habitData.last?.folderId = folderData.randomElement()?.id
+//        try? modelContext?.save()
+//        fetchFolderData()
+//        fetchHabitData()
+//    }
     
-    func addFolder(){
-        let newFolder = Folder(title: "Folder")
+    func addFolder(withTitle title:String){
+        let newFolder = Folder(title: title)
         
         modelContext?.insert(newFolder)
+        
         try? modelContext?.save()
         
         fetchFolderData()
@@ -85,19 +88,17 @@ class HabitViewModel{
         fetchFolderData()
     }
     
-    func updateHabit(){
-        
-    }
-    
     func deleteHabit(_ model: Habit){
         modelContext?.delete(model)
     }
     
     func clearAll(){
-        try? modelContext?.delete(model: Habit.self)
-        try? modelContext?.delete(model: Note.self)
-        try? modelContext?.delete(model: NoteLog.self)
         try? modelContext?.delete(model: Folder.self)
+        try? modelContext?.delete(model: Habit.self)
+//        try? modelContext?.delete(model: Note.self)
+//        try? modelContext?.delete(model: NoteLog.self)
+        fetchFolderData()
+        fetchHabitData()
     }
 }
 
