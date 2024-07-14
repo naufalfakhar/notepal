@@ -12,6 +12,7 @@
 		730DC5D02C411D860093F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5CF2C411D860093F816 /* Assets.xcassets */; };
 		730DC5D42C411D860093F816 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5D32C411D860093F816 /* Preview Assets.xcassets */; };
 		73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */; };
+		73D4528F2C449178002555DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4528E2C449178002555DF /* AppDelegate.swift */; };
 		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
 		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
 		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
@@ -41,6 +42,7 @@
 		730DC5D12C411D860093F816 /* notepal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepal.entitlements; sourceTree = "<group>"; };
 		730DC5D32C411D860093F816 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		73D4528E2C449178002555DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
 		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
+				73D4528E2C449178002555DF /* AppDelegate.swift */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
 				730DC5D12C411D860093F816 /* notepal.entitlements */,
 				730DC5D22C411D860093F816 /* Preview Content */,
@@ -295,6 +298,7 @@
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
 				EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */,
 				EF776D152C412AB800C8D119 /* HabitViewModel.swift in Sources */,
+				73D4528F2C449178002555DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

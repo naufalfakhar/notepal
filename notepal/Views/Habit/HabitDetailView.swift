@@ -31,10 +31,27 @@ struct HabitDetailView: View {
         }
     }
     
+    func createCalendarEvent() {
+        let event = EKEvent(eventStore: eventStore)
+        event.title = myHabit
+        event.notes = "\(myGoalsDesc)\n\n\(myActionPlanDesc)\n\n\(whatINeedDesc)"
+        event.url = URL(string: "notepal://viewNote?id=1234")
+        event.startDate = Date()
+        event.endDate = Date().addingTimeInterval(3600) // 1 hour event
+        event.calendar = eventStore.defaultCalendarForNewEvents
+
+        do {
+            try eventStore.save(event, span: .thisEvent)
+            print("Event saved")
+        } catch let error as NSError {
+            print("Failed to save event with error: \(error)")
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                TextField("",text: $myHabit)
+                TextField("", text: $myHabit)
                     .font(.largeTitle)
                     .bold()
                 
@@ -50,36 +67,35 @@ struct HabitDetailView: View {
                     Text("My Goals")
                         .font(.title2)
                         .bold()
-                    TextField("",text: $myGoalsDesc)
+                    TextField("", text: $myGoalsDesc)
                 }
                 
                 VStack(alignment: .leading) {
                     Text("My Action Plan")
                         .font(.title2)
                         .bold()
-                    TextField("",text: $myActionPlanDesc)
+                    TextField("", text: $myActionPlanDesc)
                 }
                 
                 VStack(alignment: .leading) {
                     Text("What I Need")
                         .font(.title2)
                         .bold()
-                    TextField("",text: $whatINeedDesc)
+                    TextField("", text: $whatINeedDesc)
                 }
                 
                 Spacer()
-
             }
             .padding()
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {
-                        
+                        // Add your action here
                     }, label: {
                         Image(systemName: "checklist")
                     })
                     Button(action: {
-                        
+                        // Add your action here
                     }, label: {
                         Image(systemName: "camera")
                     })
@@ -87,7 +103,7 @@ struct HabitDetailView: View {
             }
         }
         .sheet(isPresented: $showEventEditor) {
-            EventEditView(eventStore: eventStore)
+            EventEditView(eventStore: eventStore, onSave: createCalendarEvent)
         }
     }
 }
@@ -95,6 +111,7 @@ struct HabitDetailView: View {
 struct EventEditView: UIViewControllerRepresentable {
     var eventStore: EKEventStore
     var event: EKEvent = EKEvent(eventStore: EKEventStore())
+    var onSave: () -> Void
 
     func makeUIViewController(context: Context) -> EKEventEditViewController {
         let controller = EKEventEditViewController()
@@ -107,22 +124,26 @@ struct EventEditView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: EKEventEditViewController, context: Context) {}
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        Coordinator(self, onSave: onSave)
     }
 
     class Coordinator: NSObject, EKEventEditViewDelegate {
         var parent: EventEditView
+        var onSave: () -> Void
 
-        init(_ parent: EventEditView) {
+        init(_ parent: EventEditView, onSave: @escaping () -> Void) {
             self.parent = parent
+            self.onSave = onSave
         }
 
         func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
             controller.dismiss(animated: true, completion: nil)
+            if action != .canceled {
+                onSave()
+            }
         }
     }
 }
-
 
 #Preview {
     HabitDetailView()
