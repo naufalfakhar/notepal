@@ -13,18 +13,43 @@ import SwiftData
 class NoteViewModel: ObservableObject{
     var modelContext: ModelContext? = nil
     
-    @Published var data: [Habit] = []
-    @Published var isActive: Bool = false
+    @Published var data: [Note] = []
+    
+    func fetchAll() {
+        let descriptor = FetchDescriptor<Note>()
+        if let context = modelContext {
+            data = (try? context.fetch(descriptor)) ?? []
+        }
+    }
     
     func fetchById(id:String){
-        if let uuid = UUID(uuidString: id) {
-            print(uuid)
-            let descriptor = FetchDescriptor<Habit>(predicate: #Predicate { $0.id == uuid })
+        if let id = UUID(uuidString: id){
+            let descriptor = FetchDescriptor<Note>(predicate: #Predicate{$0.id == id})
             if let context = modelContext {
                 data = (try? context.fetch(descriptor)) ?? []
-                print(data)
             }
         }
     }
+    
+    func addNote(newFolder: Note) {
+        if let context = modelContext {
+            context.insert(newFolder)
+            try? context.save()
+            fetchAll()
+        }
+    }
+    
+    func deleteNote(id:String){
+        if let id = UUID(uuidString: id){
+            if let context = modelContext{
+                try? context.delete(model: Note.self, where: #Predicate{
+                    $0.id == id
+                })
+                
+                try? context.save()
+                fetchAll()
+            }
+        }
+        
+    }
 }
-

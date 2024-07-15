@@ -173,6 +173,7 @@
 
     },
     "What I Need" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

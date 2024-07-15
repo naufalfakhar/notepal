@@ -8,21 +8,32 @@
 import SwiftUI
 //import SwiftData
 //import UIKit
+//
+//  HabitView.swift
+//  notes
+//
+//  Created by Dason Tiovino on 09/07/24.
+//
+
+import SwiftUI
+import SwiftData
 
 struct HabitView: View {
     @Environment(\.modelContext) var modelContext
     
-    @State private var viewModel = HabitViewModel()
+    @StateObject private var habitViewModel = HabitViewModel()
+    @StateObject private var folderViewModel = FolderViewModel()
     @State private var searchValue = ""
     
     @State private var showCreateSheet = false
     @State private var folderTitleInput: String = ""
     
     var body: some View {
+        NavigationStack{
             VStack {
-                if (!$viewModel.habitData.isEmpty || !$viewModel.folderData.isEmpty) {
+                if (!$habitViewModel.data.isEmpty || !$folderViewModel.data.isEmpty) {
                     List{
-                        ForEach($viewModel.folderData){ folder in
+                        ForEach($folderViewModel.data){ folder in
                             Section {
                                 NavigationLink{
                                     // TODO: Navigate to Detail Folder
@@ -34,7 +45,7 @@ struct HabitView: View {
                                 }
                             }
                         }
-                        ForEach($viewModel.habitData){ habit in
+                        ForEach($habitViewModel.data){ habit in
                             Section {
                                 NavigationLink{
                                     // TODO: Navigate to Detail Habit
@@ -62,8 +73,11 @@ struct HabitView: View {
             }
             .navigationTitle("Habit Journey")
             .searchable(text: $searchValue, prompt: "Search")
+            
+            
+            
             Button {
-                viewModel.clearAll()
+                //            viewModel.clearAll()
             } label: {
                 Text("Clear All")
             }
@@ -90,6 +104,7 @@ struct HabitView: View {
                     }
                 }
             }
+        }
         .sheet(isPresented: $showCreateSheet, content: {
             NavigationStack {
                 VStack {
@@ -108,7 +123,7 @@ struct HabitView: View {
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button(action: {
-                            viewModel.addFolder(withTitle: folderTitleInput)
+                            folderViewModel.addFolder(Folder(title:folderTitleInput))
                             folderTitleInput = ""
                             showCreateSheet = false
                         }, label: {
@@ -119,9 +134,11 @@ struct HabitView: View {
             }
         })
         .onAppear{
-            viewModel.modelContext = modelContext
-            viewModel.fetchFolderData()
-            viewModel.fetchHabitData()
+            habitViewModel.modelContext = modelContext
+            folderViewModel.modelContext = modelContext
+            
+            folderViewModel.fetchAll()
+            habitViewModel.fetchAll()
         }
     }
 }
