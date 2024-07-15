@@ -36,6 +36,8 @@
 		A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
 		A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
 		A7FFB8982C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
+		A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
+		A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
 		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
 		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
@@ -103,6 +105,7 @@
 		A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDailyWidget.swift; sourceTree = "<group>"; };
 		A7FFB8932C450CB400D39B54 /* HabitCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardView.swift; sourceTree = "<group>"; };
 		A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardViewModel.swift; sourceTree = "<group>"; };
+		A7FFB8992C45141500D39B54 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
 		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
 				73D4528E2C449178002555DF /* AppDelegate.swift */,
+				A7FFB8992C45141500D39B54 /* Localizable.xcstrings */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
 				730DC5D12C411D860093F816 /* notepal.entitlements */,
 				730DC5D22C411D860093F816 /* Preview Content */,
@@ -368,6 +372,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 730DC5BF2C411D840093F816;
 			productRefGroup = 730DC5C92C411D840093F816 /* Products */;
@@ -387,6 +392,7 @@
 			files = (
 				730DC5D42C411D860093F816 /* Preview Assets.xcassets in Resources */,
 				730DC5D02C411D860093F816 /* Assets.xcassets in Resources */,
+				A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */,
 				A7FFB8782C450AAE00D39B54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
