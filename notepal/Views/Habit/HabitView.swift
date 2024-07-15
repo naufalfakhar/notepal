@@ -6,16 +6,6 @@
 //
 
 import SwiftUI
-//import SwiftData
-//import UIKit
-//
-//  HabitView.swift
-//  notes
-//
-//  Created by Dason Tiovino on 09/07/24.
-//
-
-import SwiftUI
 import SwiftData
 
 struct HabitView: View {
@@ -29,13 +19,13 @@ struct HabitView: View {
     @State private var folderTitleInput: String = ""
     
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             VStack {
-                if (!$habitViewModel.data.isEmpty || !$folderViewModel.data.isEmpty) {
-                    List{
-                        ForEach($folderViewModel.data){ folder in
+                if !$habitViewModel.data.isEmpty || !$folderViewModel.data.isEmpty {
+                    List {
+                        ForEach($folderViewModel.data) { folder in
                             Section {
-                                NavigationLink{
+                                NavigationLink {
                                     // TODO: Navigate to Detail Folder
                                 } label: {
                                     HStack {
@@ -45,10 +35,10 @@ struct HabitView: View {
                                 }
                             }
                         }
-                        ForEach($habitViewModel.data){ habit in
+                        ForEach($habitViewModel.data) { habit in
                             Section {
-                                NavigationLink{
-                                    // TODO: Navigate to Detail Habit
+                                NavigationLink {
+                                    HabitDetailView(id: habit.id.uuidString)
                                 } label: {
                                     HStack {
                                         Text(habit.title.wrappedValue)
@@ -73,30 +63,14 @@ struct HabitView: View {
             }
             .navigationTitle("Habit Journey")
             .searchable(text: $searchValue, prompt: "Search")
-            
-            
-            
-            Button {
-                //            viewModel.clearAll()
-            } label: {
-                Text("Clear All")
-            }
             .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    Button(action: {}, label: {
-                        Image(systemName: "list.bullet")
-                    })
-                    Button(action: {}, label: {
-                        Image(systemName: "chart.xyaxis.line")
-                    })
-                }
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {
                         showCreateSheet.toggle()
                     }, label: {
                         Image(systemName: "folder.badge.plus")
                     })
-                    NavigationLink{
+                    NavigationLink {
                         HabitDetailView()
                             .toolbarRole(.editor)
                     } label: {
@@ -104,9 +78,15 @@ struct HabitView: View {
                     }
                 }
             }
-        }
-        .sheet(isPresented: $showCreateSheet, content: {
-            NavigationStack {
+            .onAppear {
+                habitViewModel.modelContext = modelContext
+                folderViewModel.modelContext = modelContext
+                
+                folderViewModel.fetchAll()
+                habitViewModel.fetchAll()
+            }
+            .sheet(isPresented: $showCreateSheet, content: {
+                
                 VStack {
                     TextField("Enter folder name", text: $folderTitleInput)
                         .textFieldStyle(.roundedBorder)
@@ -114,16 +94,16 @@ struct HabitView: View {
                     Spacer()
                 }
                 .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
                             showCreateSheet = false
                         }, label: {
                             Text("Cancel")
                         })
                     }
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            folderViewModel.addFolder(Folder(title:folderTitleInput))
+                            folderViewModel.addFolder(newFolder: Folder(title: folderTitleInput))
                             folderTitleInput = ""
                             showCreateSheet = false
                         }, label: {
@@ -131,14 +111,7 @@ struct HabitView: View {
                         })
                     }
                 }
-            }
-        })
-        .onAppear{
-            habitViewModel.modelContext = modelContext
-            folderViewModel.modelContext = modelContext
-            
-            folderViewModel.fetchAll()
-            habitViewModel.fetchAll()
+            })
         }
     }
 }

@@ -10,7 +10,7 @@ import EventKit
 import EventKitUI
 
 struct HabitDetailView: View {
-    var id:String
+    var id:String?
     @Environment(\.modelContext) var modelContext
     @StateObject private var viewModel = HabitViewModel()
     
@@ -32,7 +32,7 @@ struct HabitDetailView: View {
     func createCalendarEvent() {
         let event = EKEvent(eventStore: eventStore)
         event.title = viewModel.data[0].title
-//        event.notes = "\(myGoalsDesc)\n\n\(myActionPlanDesc)\n\n\(whatINeedDesc)"
+        //        event.notes = "\(myGoalsDesc)\n\n\(myActionPlanDesc)\n\n\(whatINeedDesc)"
         event.url = URL(string: "notepal://page?id=\(viewModel.data.first!.id)")
         event.startDate = Date()
         event.endDate = Date().addingTimeInterval(3600) // 1 hour event
@@ -47,86 +47,104 @@ struct HabitDetailView: View {
     }
     
     var body: some View {
-        if let note = viewModel.data.first{
-            VStack(alignment: .leading) {
-                TextField("", text: $viewModel.data[0].title)
-                    .font(.largeTitle)
-                    .bold()
-                
-                Button(action: {
-                    requestAccessToCalendar()
-                }, label: {
-                    Text("Add to Calendar")
-                })
-                
-                Divider()
-                
-                Divider()
-                
-                Text("My Goals")
-                    .font(.headline)
-                
-                TextField(text: $viewModel.data[0].goal){}
-                
-                Text("My Action Plan")
-                    .font(.headline)
-                
-                ForEach($viewModel.data[0].plans){ $list in
-                    Toggle(
-                        list.content,
-                        isOn: $list.done
-                    ).toggleStyle(ToggleCheckboxStyle(
-                        text: $list.content,
-                        axis: .vertical
-                    ))
-                }
-                
-                Divider()
-                
-                ForEach($viewModel.data[0].note.contents) { $note in
-                    VStack(alignment: .leading) {
-                        
-                        Text(note.createdAt.noteFormatted())
-                            .font(.headline)
-                        
-                        TextView(
-                            attributedText: $note.content,
-                            allowsEditingTextAttributes: true,
-                            font: .systemFont(ofSize: 24)
-                        )
-                        .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
-                    }
-                    .padding(.vertical)
-                }
-                
-//                VStack(alignment: .leading) {
-//                    Text("What I Need")
-//                        .font(.title2)
-//                        .bold()
-//                    TextField("", text: $whatINeedDesc)
-//                }
-            }
-            .padding()
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
+        NavigationStack{
+            
+            if let note = viewModel.data.first{
+                VStack(alignment: .leading) {
+                    TextField("", text: $viewModel.data[0].title)
+                        .font(.largeTitle)
+                        .bold()
+                    
                     Button(action: {
-                        // Add your action here
+                        requestAccessToCalendar()
                     }, label: {
-                        Image(systemName: "checklist")
-                    })
-                    Button(action: {
-                        // Add your action here
-                    }, label: {
-                        Image(systemName: "camera")
+                        Text("Add to Calendar")
                     })
                     
+                    Divider()
+                    
+                    Text("My Goals")
+                        .font(.headline)
+                    
+                    TextField(text: $viewModel.data[0].goal){}
+                    
+                    Text("My Action Plan")
+                        .font(.headline)
+                    
+                    ForEach($viewModel.data[0].plans){ $list in
+                        Toggle(
+                            list.content,
+                            isOn: $list.done
+                        ).toggleStyle(ToggleCheckboxStyle(
+                            text: $list.content,
+                            axis: .vertical
+                        ))
+                    }
+                    
+                    Divider()
+                    
+                    ForEach($viewModel.data[0].note.contents) { $note in
+                        VStack(alignment: .leading) {
+                            
+                            Text(note.createdAt.noteFormatted())
+                                .font(.headline)
+                            
+                            TextView(
+                                attributedText: $note.content,
+                                allowsEditingTextAttributes: true,
+                                font: .systemFont(ofSize: 24)
+                            )
+                            .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
+                        }
+                        .padding(.vertical)
+                    }
+                    
+                    //                VStack(alignment: .leading) {
+                    //                    Text("What I Need")
+                    //                        .font(.title2)
+                    //                        .bold()
+                    //                    TextField("", text: $whatINeedDesc)
+                    //                }
+                }
+                .padding()
+                .toolbar {
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Button(action: {
+                            // Add your action here
+                        }, label: {
+                            Image(systemName: "checklist")
+                        })
+                        Button(action: {
+                            // Add your action here
+                        }, label: {
+                            Image(systemName: "camera")
+                        })
+                        
+                    }
+                }
+                .sheet(isPresented: $showEventEditor) {
+                    EventEditView(eventStore: eventStore, onSave: createCalendarEvent)
                 }
             }
-            
-            .sheet(isPresented: $showEventEditor) {
-                EventEditView(eventStore: eventStore, onSave: createCalendarEvent)
+            else{
+                Text("No Notes with This Id")
+            }
+        }.onAppear{
+            viewModel.modelContext = modelContext
+            if id != nil {
+                viewModel.fetchById(id: id!)
+            }else{
+                viewModel.addHabit(newHabit: Habit(
+                    title: "New Title",
+                    goal: "Do what you believe",
+                    plan: [
+                        Checklist(content: "Make your action plan"),
+                        Checklist(content: "Another plan"),
+                    ])
+                )
             }
         }
+        
     }
 }
 

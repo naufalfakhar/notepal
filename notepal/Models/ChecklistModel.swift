@@ -14,7 +14,7 @@ class Checklist: Identifiable  {
     var content: String
     var done: Bool
     
-    init(id: UUID, content: String, done: Bool) {
+    init(id: UUID = UUID(), content: String, done: Bool = false) {
         self.id = id
         self.content = content
         self.done = done

@@ -29,13 +29,14 @@ class HabitViewModel: ObservableObject{
                 data = (try? context.fetch(descriptor)) ?? []
             }
         }
-        
     }
     
-    func addHabit(newFolder: Habit) {
+    func addHabit(newHabit: Habit) {
         if let context = modelContext {
-            context.insert(newFolder)
+            
+            context.insert(newHabit)
             try? context.save()
+            
             fetchAll()
         }
     }
