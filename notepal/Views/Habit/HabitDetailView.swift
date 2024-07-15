@@ -49,7 +49,6 @@ struct HabitDetailView: View {
     }
     
     var body: some View {
-        NavigationStack {
             VStack(alignment: .leading) {
                 TextField("", text: $myHabit)
                     .font(.largeTitle)
@@ -99,9 +98,10 @@ struct HabitDetailView: View {
                     }, label: {
                         Image(systemName: "camera")
                     })
+                    
                 }
             }
-        }
+        
         .sheet(isPresented: $showEventEditor) {
             EventEditView(eventStore: eventStore, onSave: createCalendarEvent)
         }
@@ -146,5 +146,7 @@ struct EventEditView: UIViewControllerRepresentable {
 }
 
 #Preview {
-    HabitDetailView()
+    NavigationStack {
+        HabitDetailView()
+    }
 }

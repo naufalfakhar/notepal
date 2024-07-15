@@ -19,7 +19,6 @@ struct HabitView: View {
     @State private var folderTitleInput: String = ""
     
     var body: some View {
-        NavigationStack{
             VStack {
                 if (!$viewModel.habitData.isEmpty || !$viewModel.folderData.isEmpty) {
                     List{
@@ -91,7 +90,6 @@ struct HabitView: View {
                     }
                 }
             }
-        }
         .sheet(isPresented: $showCreateSheet, content: {
             NavigationStack {
                 VStack {
@@ -129,14 +127,16 @@ struct HabitView: View {
 }
 
 #Preview {
-    HabitView()
-        .modelContainer(for: [
-            Note.self,
-            NoteLog.self,
-            HabitCategory.self,
-            Habit.self,
-            HabitLog.self,
-            Folder.self,
-            Checklist.self,
-        ])
+    NavigationStack {
+        HabitView()
+            .modelContainer(for: [
+                Note.self,
+                NoteLog.self,
+                HabitCategory.self,
+                Habit.self,
+                HabitLog.self,
+                Folder.self,
+                Checklist.self,
+            ])
+    }
 }
