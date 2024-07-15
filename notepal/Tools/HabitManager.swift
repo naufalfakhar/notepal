@@ -8,8 +8,48 @@
 import SwiftUI
 import SwiftData
 
+struct HabitDataLog {
+    var date: Date
+    var habitCount: Int
+}
+
+struct HabitData: Identifiable {
+    var id = UUID()
+    var title: String
+}
+
 class HabitManager: ObservableObject {
     private let lastSavedDateKey = "lastSavedDate"
+    
+    func fetchHabitDaily(data: [Habit]) -> [HabitData] {
+        return [
+            HabitData(title: "Health Habit"),
+            HabitData(title: "Workout Data"),
+            HabitData(title: "Coding Habit")
+        ]
+    }
+    
+    @MainActor func fetchHabitLogsForPastWeek(logs: [HabitLog]) -> [HabitDataLog] {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        
+        let today = calendar.startOfDay(for: Date())
+        let oneWeekAgo = calendar.date(byAdding: .day, value: -7, to: today)!
+
+        let logsForPastWeek = logs.filter { $0.date >= oneWeekAgo && $0.date <= today }
+        
+        var habitDataLogs: [HabitDataLog] = []
+        var currentDate = oneWeekAgo
+        
+        while currentDate < today {
+            let logForDate = logsForPastWeek.filter { calendar.isDate($0.date, inSameDayAs: currentDate) }
+            let habitCount = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.reduce(0) { $0 + ($1 ? 1 : 0) } }
+            habitDataLogs.append(HabitDataLog(date: currentDate, habitCount: habitCount))
+            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+        }
+        
+        return habitDataLogs
+    }
     
     func checkAndLogHabits(modelContext: ModelContext) {
         guard let lastSavedDate = UserDefaults.standard.object(forKey: lastSavedDateKey) as? Date else {
@@ -40,6 +80,19 @@ class HabitManager: ObservableObject {
             saveHabitsToLogAndReset(for: nextDate, modelContext: modelContext)
             UserDefaults.standard.set(nextDate, forKey: lastSavedDateKey)
         }
+        
+//        for i in 1...7 {
+//            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i, to: currentDate)!
+//            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
+//            modelContext.insert(habitData)
+//        }
+//
+//        let healthData = Habit(id: UUID(), title: "Health Habit", goal: "jadi sehat", plan: [Checklist(id: UUID(), content: "makan sehat", done: false)])
+//        let workoutData = Habit(id: UUID(), title: "Workout Habit", goal: "jadi ade ray", plan: [Checklist(id: UUID(), content: "olahraga woy", done: false), Checklist(id: UUID(), content: "makan yang banyak", done: false)])
+//        let codingData = Habit(id: UUID(), title: "Coding Habit", goal: "bisa ngoding", plan: [Checklist(id: UUID(), content: "kerjain challenge woy game mulu", done: false)])
+//        modelContext.insert(healthData)
+//        modelContext.insert(workoutData)
+//        modelContext.insert(codingData)
 
         UserDefaults.standard.set(currentDate, forKey: lastSavedDateKey)
     }

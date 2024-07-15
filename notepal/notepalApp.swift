@@ -6,9 +6,30 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MyNotesApp: App {
+    @StateObject private var habitManager = HabitManager()
+    private var sharedModelContainer: ModelContainer = {
+        let schema = Schema([
+            Note.self,
+            NoteLog.self,
+            HabitCategory.self,
+            Habit.self,
+            Folder.self,
+            Checklist.self,
+            HabitLog.self,
+        ])
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        
+        do {
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+        } catch {
+            fatalError("Could not create ModelContainer: \(error)")
+        }
+    }()
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
@@ -19,15 +40,7 @@ struct MyNotesApp: App {
                         handleCustomURL(url)
                     }
                 }
-                .modelContainer(for: [
-                    Note.self,
-                    NoteLog.self,
-                    HabitCategory.self,
-                    Habit.self,
-                    HabitLog.self,
-                    Folder.self,
-                    Checklist.self,
-                ])
+                .modelContainer(sharedModelContainer)
         }
     }
 
