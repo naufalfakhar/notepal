@@ -19,7 +19,7 @@ class Habit: Identifiable{
     var isCompleted: Bool
     
     init(
-        id: UUID,
+        id: UUID = UUID(),
         folderId: UUID? = nil,
         title: String,
         goal: String,

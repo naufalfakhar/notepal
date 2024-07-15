@@ -33,7 +33,7 @@ struct HabitCard: View {
             }
             Spacer()
             NavigationLink(destination: {
-                NoteView(model: $model)
+                HabitDetailView(id: model.id.uuidString)
             }) {
 //                Image(systemName: "chevron.compact.right")
 //                    .foregroundColor(.black.opacity(0.5))

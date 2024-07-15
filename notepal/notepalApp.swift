@@ -35,20 +35,8 @@ struct MyNotesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onReceive(NotificationCenter.default.publisher(for: .didReceiveCustomURL)) { notification in
-                    if let url = notification.object as? URL {
-                        handleCustomURL(url)
-                    }
-                }
+                .environmentObject(NavigationViewModel())
                 .modelContainer(sharedModelContainer)
-        }
-    }
-
-    private func handleCustomURL(_ url: URL) {
-        // Handle the URL and perform any specific actions
-        if let host = url.host {
-            // For example, navigate to a specific note based on the URL
-            print("Custom URL host: \(host)")
         }
     }
 }
