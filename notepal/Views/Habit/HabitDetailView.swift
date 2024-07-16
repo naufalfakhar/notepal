@@ -58,100 +58,101 @@ struct HabitDetailView: View {
     
     var body: some View {
         NavigationStack{
-            
-            if viewModel.data.first != nil {
-                VStack(alignment: .leading) {
-                    TextField("", text: $viewModel.data[0].title)
-                        .font(.largeTitle)
-                        .bold()
-                    
-                    Button(action: { 
-                        createCalendarEvent()
-                        requestAccessToCalendar()
-                    }, label: {
-                        Text("Add to Calendar")
-                    })
-                    
-                    Divider()
-                    
-                    Text("My Goals")
-                        .font(.headline)
-                    
-                    TextField(text: $viewModel.data[0].goal){}
-                    
-                    Text("My Action Plan")
-                        .font(.headline)
-                    
-                    ForEach($viewModel.data[0].plans.sorted(by: {$0.id < $1.id})){ $list in
-                        Toggle(
-                            list.content,
-                            isOn: $list.done
-                        ).toggleStyle(CheckboxStrikethrough(
-//                            id: $list.id,
-//                            model: $viewModel.data[0],
-                            text: $list.content
-                        ))
-                    }
-                    
-                    Divider()
-                    
-                    ForEach($viewModel.data[0].note.contents) { $note in
-                        VStack(alignment: .leading) {
-                            
-                            Text(note.createdAt.noteFormatted())
-                                .font(.headline)
-                            
-                            TextView(
-                                attributedText: $note.content,
-                                allowsEditingTextAttributes: true,
-                                font: .systemFont(ofSize: 24)
-                            )
-                            .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
+            ScrollView{
+                if viewModel.data.first != nil {
+                    VStack(alignment: .leading) {
+                        TextField("", text: $viewModel.data[0].title)
+                            .font(.largeTitle)
+                            .bold()
+                        
+                        Button(action: {
+                            createCalendarEvent()
+                            requestAccessToCalendar()
+                        }, label: {
+                            Text("Add to Calendar")
+                        })
+                        
+                        Divider()
+                        
+                        Text("My Goals")
+                            .font(.headline)
+                        
+                        TextField(text: $viewModel.data[0].goal){}
+                        
+                        Text("My Action Plan")
+                            .font(.headline)
+                        
+                        ForEach($viewModel.data[0].plans.sorted(by: {$0.id < $1.id})){ $list in
+                            Toggle(
+                                list.content,
+                                isOn: $list.done
+                            ).toggleStyle(CheckboxStrikethrough(
+                                //                            id: $list.id,
+                                //                            model: $viewModel.data[0],
+                                text: $list.content
+                            ))
                         }
-                        .padding(.vertical)
+                        
+                        Divider()
+                        
+                        ForEach($viewModel.data[0].note) { $note in
+                            VStack(alignment: .leading) {
+                                
+                                Text(note.createdAt.noteFormatted())
+                                    .font(.headline)
+                                
+                                TextView(
+                                    attributedText: $note.content,
+                                    allowsEditingTextAttributes: true,
+                                    font: .systemFont(ofSize: 24)
+                                )
+                                .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
+                            }
+                            .padding(.vertical)
+                        }
+                    }
+                    .padding()
+                    .toolbar {
+                        ToolbarItemGroup(placement: .bottomBar) {
+                            Button(action: {
+                                // TODO: Action here
+                            }, label: {
+                                Image(systemName: "textformat")
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // TODO: Action here
+                            }, label: {
+                                Image(systemName: "checklist")
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // TODO: Action here
+                            }, label: {
+                                Image(systemName: "camera")
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // TODO: Action here
+                            }, label: {
+                                Image(systemName: "pencil.tip.crop.circle")
+                            })
+                            
+                        }
+                    }
+                    .sheet(isPresented: $showEventEditor) {
+                        EventEditViewController(event: $selectedEvent, eventStore: eventStore)
                     }
                 }
-                .padding()
-                .toolbar {
-                    ToolbarItemGroup(placement: .bottomBar) {
-                        Button(action: {
-                            // TODO: Action here
-                        }, label: {
-                            Image(systemName: "textformat")
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            // TODO: Action here
-                        }, label: {
-                            Image(systemName: "checklist")
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            // TODO: Action here
-                        }, label: {
-                            Image(systemName: "camera")
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            // TODO: Action here
-                        }, label: {
-                            Image(systemName: "pencil.tip.crop.circle")
-                        })
-                        
-                    }
+                else{
+                    Text("No Notes with This Id")
                 }
-                .sheet(isPresented: $showEventEditor) {
-                    EventEditViewController(event: $selectedEvent, eventStore: eventStore)
-                }
-            }
-            else{
-                Text("No Notes with This Id")
             }
         }.onAppear{
             viewModel.modelContext = modelContext
@@ -166,6 +167,9 @@ struct HabitDetailView: View {
                         Checklist(id: 1, content: "Make your action plan"),
                         Checklist(id: 2, content: "Another Plan"),
                         Checklist(id: 3, content: "Specific Plan"),
+                    ],
+                    note: [
+                        NoteLog()
                     ]
                 )
             

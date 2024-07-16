@@ -27,7 +27,7 @@ struct AddNoteSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .onDisappear {
                 if !title.isEmpty || !noteBody.isEmpty {
-                    let note = RegularNote(title: title, noteBody: noteBody, date: date)
+                    let note = Note(title: title, noteBody: noteBody, date: date)
                     context.insert(note)
                     try? context.save()
                 }

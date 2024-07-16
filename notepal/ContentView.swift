@@ -47,6 +47,31 @@ struct ContentView: View {
                 
                 case .detail(let data):
                     HabitDetailView(id: data)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .topBarLeading) {
+                            Button(action: {
+                                navigationViewModel.navigateToHome()
+                            }, label: {
+                                Image(systemName: "chevron.backward")
+                            })
+                        }
+
+                    }
+                    
+                
+                case .chart:
+                    LineChartDetailView()
+                    .toolbar {
+                        ToolbarItemGroup(placement: .topBarLeading) {
+                            Button(action: {
+                                navigationViewModel.navigateToHome()
+                            }, label: {
+                                Image(systemName: "chevron.backward")
+                            })
+                        }
+
+                    }
             }
         }.onOpenURL{ url in
             guard url.scheme == "notepal" else {return}
@@ -57,7 +82,10 @@ struct ContentView: View {
                     newParams[queryItem.name] = queryItem.value
                 }
                 
-                navigationViewModel.navigateToDetail(with: newParams["id"] ?? "")
+                if(newParams["page"] == "chart"){
+                    return navigationViewModel.navigateToChart()
+                }
+                return navigationViewModel.navigateToDetail(with: newParams["id"] ?? "")
             }
         }
     }
