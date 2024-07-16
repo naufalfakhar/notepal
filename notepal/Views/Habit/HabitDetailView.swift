@@ -20,7 +20,7 @@ struct HabitDetailView: View {
     @State private var eventStore = EKEventStore()
     
     func requestAccessToCalendar() {
-        eventStore.requestAccess(to: .event) { (granted, error) in
+        eventStore.requestFullAccessToEvents { (granted, error) in
             if granted {
                 DispatchQueue.main.async {
                     showEventEditor = true
@@ -77,7 +77,7 @@ struct HabitDetailView: View {
                         Toggle(
                             list.content,
                             isOn: $list.done
-                        ).toggleStyle(ToggleCheckboxStyle(
+                        ).toggleStyle(CheckboxStrikethrough(
                             text: $list.content,
                             axis: .vertical
                         ))
@@ -100,26 +100,38 @@ struct HabitDetailView: View {
                         }
                         .padding(.vertical)
                     }
-                    
-                    //                VStack(alignment: .leading) {
-                    //                    Text("What I Need")
-                    //                        .font(.title2)
-                    //                        .bold()
-                    //                    TextField("", text: $whatINeedDesc)
-                    //                }
                 }
                 .padding()
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Button(action: {
-                            // Add your action here
+                            // TODO: Action here
+                        }, label: {
+                            Image(systemName: "textformat")
+                        })
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            // TODO: Action here
                         }, label: {
                             Image(systemName: "checklist")
                         })
+                        
+                        Spacer()
+                        
                         Button(action: {
-                            // Add your action here
+                            // TODO: Action here
                         }, label: {
                             Image(systemName: "camera")
+                        })
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            // TODO: Action here
+                        }, label: {
+                            Image(systemName: "pencil.tip.crop.circle")
                         })
                         
                     }

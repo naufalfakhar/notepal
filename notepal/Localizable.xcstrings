@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "21" : {
+
+    },
     "Add to Calendar" : {
       "localizations" : {
         "id" : {
@@ -74,6 +77,9 @@
           }
         }
       }
+    },
+    "Delete" : {
+
     },
     "Done" : {
       "localizations" : {

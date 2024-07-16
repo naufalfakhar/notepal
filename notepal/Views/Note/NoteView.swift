@@ -52,7 +52,7 @@ struct NoteView: View {
                             Toggle(
                                 list.content,
                                 isOn: $list.done
-                            ).toggleStyle(ToggleCheckboxStyle(
+                            ).toggleStyle(CheckboxStrikethrough(
                                 text: $list.content,
                                 axis: .vertical
                             ))

@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct ToggleCheckboxStyle: ToggleStyle {
+struct CheckboxStrikethrough: ToggleStyle {
     @Binding var text: String
     var axis: Axis = .horizontal
     
@@ -22,6 +22,7 @@ struct ToggleCheckboxStyle: ToggleStyle {
             }).foregroundStyle(.black)
             
             TextField(text: $text, axis: axis){}
+                .strikethrough(configuration.isOn)
                 .foregroundStyle(.black)
         }
         

@@ -11,6 +11,7 @@
 		730DC5CE2C411D840093F816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DC5CD2C411D840093F816 /* ContentView.swift */; };
 		730DC5D02C411D860093F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5CF2C411D860093F816 /* Assets.xcassets */; };
 		730DC5D42C411D860093F816 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5D32C411D860093F816 /* Preview Assets.xcassets */; };
+		737C1C142C4646C6005DFC5C /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C132C4646C6005DFC5C /* HabitCard.swift */; };
 		73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */; };
 		73D4528F2C449178002555DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4528E2C449178002555DF /* AppDelegate.swift */; };
 		A7FFB86D2C450AAD00D39B54 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */; };
@@ -35,7 +36,6 @@
 		A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
 		A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
 		A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
-		A7FFB8982C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
 		A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DE2C455357001448CF /* HabitViewModel.swift */; };
@@ -50,10 +50,8 @@
 		EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCC2C4129D200C8D119 /* HabitModel.swift */; };
 		EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCD2C4129D200C8D119 /* NoteModel.swift */; };
 		EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCE2C4129D200C8D119 /* FolderModel.swift */; };
-		EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */; };
+		EF776CD72C4129DF00C8D119 /* CheckboxStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */; };
 		EF776D142C412AB800C8D119 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D122C412AB800C8D119 /* HabitView.swift */; };
-		EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D172C412AF700C8D119 /* HabitCard.swift */; };
-		EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D182C412AF700C8D119 /* FolderCard.swift */; };
 		EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1B2C412B0F00C8D119 /* NoteView.swift */; };
 		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
 		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
@@ -93,6 +91,7 @@
 		730DC5CF2C411D860093F816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		730DC5D12C411D860093F816 /* notepal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepal.entitlements; sourceTree = "<group>"; };
 		730DC5D32C411D860093F816 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		737C1C132C4646C6005DFC5C /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
 		73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 		73D4528E2C449178002555DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,10 +121,8 @@
 		EF776CCC2C4129D200C8D119 /* HabitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		EF776CCD2C4129D200C8D119 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		EF776CCE2C4129D200C8D119 /* FolderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
-		EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleCheckboxStyle.swift; sourceTree = "<group>"; };
+		EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxStrikethrough.swift; sourceTree = "<group>"; };
 		EF776D122C412AB800C8D119 /* HabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
-		EF776D172C412AF700C8D119 /* HabitCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
-		EF776D182C412AF700C8D119 /* FolderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
 		EF776D1B2C412B0F00C8D119 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
 		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -178,9 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				EF776CC42C41268B00C8D119 /* Info.plist */,
-				EF776CC02C41260200C8D119 /* Configs */,
-				EF776CBE2C4125C400C8D119 /* Models */,
 				EF776D232C412BA200C8D119 /* Tools */,
+				EF776D0C2C412A2300C8D119 /* Components */,
+				EF776CBE2C4125C400C8D119 /* Models */,
 				EF4AB5DD2C45533F001448CF /* ViewModels */,
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
@@ -228,21 +225,13 @@
 		EF4AB5DD2C45533F001448CF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */,
 				EF4AB5E42C455425001448CF /* FolderViewModel.swift */,
 				EF4AB5DE2C455357001448CF /* HabitViewModel.swift */,
 				EF4AB5E02C455357001448CF /* NoteViewModel.swift */,
 				EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		EF4AB5E62C455832001448CF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */,
-				EF4AB5E72C462564001448CF /* FolderDetailView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		EF776CBE2C4125C400C8D119 /* Models */ = {
@@ -268,29 +257,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EF776CC02C41260200C8D119 /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				EF776CC12C41260800C8D119 /* Styles */,
-			);
-			path = Configs;
-			sourceTree = "<group>";
-		};
-		EF776CC12C41260800C8D119 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
 		EF776D0C2C412A2300C8D119 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A7FFB8932C450CB400D39B54 /* HabitCardView.swift */,
 				EF776D282C412D5B00C8D119 /* SpeechButton.swift */,
-				EF776D182C412AF700C8D119 /* FolderCard.swift */,
-				EF776D172C412AF700C8D119 /* HabitCard.swift */,
+				EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */,
+				737C1C132C4646C6005DFC5C /* HabitCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,10 +271,9 @@
 		EF776D0D2C412A2300C8D119 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
-				EF4AB5E62C455832001448CF /* Views */,
-				EF776D0C2C412A2300C8D119 /* Components */,
 				EF776D122C412AB800C8D119 /* HabitView.swift */,
-				A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */,
+				73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */,
+				EF4AB5E72C462564001448CF /* FolderDetailView.swift */,
 			);
 			path = Habit;
 			sourceTree = "<group>";
@@ -441,15 +413,15 @@
 				EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */,
 				EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */,
 				EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */,
+				737C1C142C4646C6005DFC5C /* HabitCard.swift in Sources */,
 				EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */,
 				EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */,
 				EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */,
 				EF4AB5E82C462564001448CF /* FolderDetailView.swift in Sources */,
 				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
-				EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */,
+				EF776CD72C4129DF00C8D119 /* CheckboxStrikethrough.swift in Sources */,
 				730DC5CE2C411D840093F816 /* ContentView.swift in Sources */,
 				A7FFB88A2C450B3A00D39B54 /* LineChartView.swift in Sources */,
-				EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */,
 				EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */,
 				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
@@ -464,7 +436,6 @@
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
 				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
-				EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */,
 				A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
 				73D4528F2C449178002555DF /* AppDelegate.swift in Sources */,
 			);
@@ -475,7 +446,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FFB8822C450AEC00D39B54 /* HabitModel.swift in Sources */,
-				A7FFB8982C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */,
 				A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */,
 				A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */,
 				A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */,
@@ -634,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -677,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
