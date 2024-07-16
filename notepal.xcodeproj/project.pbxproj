@@ -56,8 +56,6 @@
 		EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCE2C4129D200C8D119 /* FolderModel.swift */; };
 		EF776CD72C4129DF00C8D119 /* CheckboxStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */; };
 		EF776D142C412AB800C8D119 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D122C412AB800C8D119 /* HabitView.swift */; };
-		EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1B2C412B0F00C8D119 /* NoteView.swift */; };
-		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
 		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
 		EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D242C412BB200C8D119 /* HabitManager.swift */; };
 /* End PBXBuildFile section */
@@ -130,8 +128,6 @@
 		EF776CCE2C4129D200C8D119 /* FolderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
 		EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxStrikethrough.swift; sourceTree = "<group>"; };
 		EF776D122C412AB800C8D119 /* HabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
-		EF776D1B2C412B0F00C8D119 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
-		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
 		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		EF776D242C412BB200C8D119 /* HabitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,7 +168,6 @@
 		730DC5BF2C411D840093F816 = {
 			isa = PBXGroup;
 			children = (
-				07BDD6412C465CDB00691B93 /* RegularNotes */,
 				A7FFB88C2C450BFE00D39B54 /* HabitWidgetExtension.entitlements */,
 				730DC5CA2C411D840093F816 /* notepal */,
 				A7FFB8702C450AAD00D39B54 /* HabitWidget */,
@@ -271,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				EF776D0D2C412A2300C8D119 /* Habit */,
-				EF776D0F2C412A2300C8D119 /* Note */,
+				07BDD6412C465CDB00691B93 /* RegularNotes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +274,7 @@
 		EF776D0C2C412A2300C8D119 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EF776D202C412B1C00C8D119 /* TextView.swift */,
 				EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */,
 				737C1C132C4646C6005DFC5C /* HabitCard.swift */,
 			);
@@ -293,24 +289,6 @@
 				EF4AB5E72C462564001448CF /* FolderDetailView.swift */,
 			);
 			path = Habit;
-			sourceTree = "<group>";
-		};
-		EF776D0E2C412A2300C8D119 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */,
-				EF776D202C412B1C00C8D119 /* TextView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		EF776D0F2C412A2300C8D119 /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				EF776D0E2C412A2300C8D119 /* Components */,
-				EF776D1B2C412B0F00C8D119 /* NoteView.swift */,
-			);
-			path = Note;
 			sourceTree = "<group>";
 		};
 		EF776D232C412BA200C8D119 /* Tools */ = {
@@ -440,14 +418,12 @@
 				07BDD6452C465D9A00691B93 /* AddNoteSheet.swift in Sources */,
 				A7FFB88A2C450B3A00D39B54 /* LineChartView.swift in Sources */,
 				EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */,
-				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
 				07BDD64D2C465DF800691B93 /* EmptyNotesView.swift in Sources */,
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
 				EF4AB5EA2C4663B9001448CF /* RegularNote.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
-				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
 				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,

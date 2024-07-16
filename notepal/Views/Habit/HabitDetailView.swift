@@ -9,6 +9,14 @@ import SwiftUI
 import EventKit
 import EventKitUI
 
+extension Date{
+    func noteFormatted() -> String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter.string(from: self)
+    }
+}
+
 struct HabitDetailView: View {
     var id: String?
     var folderId: String?
