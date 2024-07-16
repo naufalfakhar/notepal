@@ -49,7 +49,7 @@ struct ContentView: View {
                     HabitDetailView(id: data)
             }
         }.onOpenURL{ url in
-            guard url.scheme == "mynotes" else {return}
+            guard url.scheme == "notepal" else {return}
             
             if let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
                 var newParams: [String: String] = [:]

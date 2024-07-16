@@ -13,8 +13,28 @@ struct TextView: UIViewRepresentable {
     @State var allowsEditingTextAttributes: Bool = false
     @State var font: UIFont?
     
+    class Coordinator: NSObject, UITextViewDelegate {
+        var parent: TextView
+
+        init(parent: TextView) {
+            self.parent = parent
+        }
+
+        func textViewDidChange(_ textView: UITextView) {
+            parent.attributedText = NSMutableAttributedString(attributedString: textView.attributedText)
+            print("Text edited")
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(parent: self)
+    }
+    
+    
     func makeUIView(context: Context) -> UITextView {
-        return UITextView()
+        let textView = UITextView()
+        textView.delegate = context.coordinator
+        return textView
     }
 
     func updateUIView(_ uiView: UITextView, context: Context) {
