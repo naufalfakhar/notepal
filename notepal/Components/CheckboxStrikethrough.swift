@@ -9,9 +9,10 @@ import SwiftUI
 import Foundation
 
 struct CheckboxStrikethrough: ToggleStyle {
+//    @Binding var id: UUID
+//    @Binding var model: Habit
     @Binding var text: String
     var axis: Axis = .horizontal
-    
 
     func makeBody(configuration: Configuration) -> some View {
         HStack(alignment: .top){
@@ -24,8 +25,12 @@ struct CheckboxStrikethrough: ToggleStyle {
             TextField(text: $text, axis: axis){}
                 .strikethrough(configuration.isOn)
                 .foregroundStyle(.black)
+//                .onSubmit {
+//                    if let index = model.plans.firstIndex(where: {$0.id == id}){
+//                        model.plans.insert(Checklist(content: ""), at: index + 1)
+//                    }
+//                }
         }
-        
     }
 }
 
