@@ -19,7 +19,8 @@ struct ContentView: View {
                 List{
                     Section{
                         NavigationLink{
-                            // TODO: Navigate to Regular Notes
+                        RegularNoteView()
+                                .toolbarRole(.editor)
                         }label:{
                             HStack{
                                 Image(systemName: "folder")
