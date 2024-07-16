@@ -25,7 +25,7 @@ struct HabitView: View {
                         ForEach($folderViewModel.data) { folder in
                             Section {
                                 NavigationLink {
-                                    // TODO: Navigate to Detail Folder
+                                    FolderDetailView(id: folder.id.uuidString)
                                 } label: {
                                     HStack {
                                         Image(systemName: "folder")
@@ -34,7 +34,7 @@ struct HabitView: View {
                                 }
                             }
                         }
-                        ForEach($habitViewModel.data) { habit in
+                        ForEach($habitViewModel.data.filter{$0.wrappedValue.folderId == nil}) { habit in
                             Section {
                                 NavigationLink {
                                     HabitDetailView(id: habit.id.uuidString)
