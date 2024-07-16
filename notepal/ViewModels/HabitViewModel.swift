@@ -54,4 +54,16 @@ class HabitViewModel: ObservableObject{
         }
         
     }
+    
+//    Clear all data
+//    func clearAll(){
+//        if let context = modelContext {
+//            try? context.delete(model: Habit.self)
+//            try? context.delete(model: Note.self)
+//            try? context.delete(model: NoteLog.self)
+//            try? context.delete(model: Folder.self)
+//    
+//            try? context.save()
+//        }
+//    }
 }

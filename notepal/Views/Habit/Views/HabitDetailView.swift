@@ -134,14 +134,17 @@ struct HabitDetailView: View {
             if id != nil {
                 viewModel.fetchById(id: id!)
             }else{
-                viewModel.addHabit(newHabit: Habit(
+                let newHabit = Habit(
                     title: "New Title",
                     goal: "Do what you believe",
                     plan: [
                         Checklist(content: "Make your action plan"),
                         Checklist(content: "Another plan"),
-                    ])
+                    ]
                 )
+            
+                viewModel.addHabit(newHabit: newHabit)
+                viewModel.fetchById(id: newHabit.id.uuidString)
             }
         }
         
