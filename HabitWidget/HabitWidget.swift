@@ -13,11 +13,11 @@ struct Provider: TimelineProvider {
     let habitManager = HabitManager()
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), habitDataLogs: [])
+        SimpleEntry(date: Date(), habitDataLogs: [], habitLastWeekLogs: [])
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), habitDataLogs: [])
+        let entry = SimpleEntry(date: Date(), habitDataLogs: [], habitLastWeekLogs: [])
         completion(entry)
     }
 
@@ -32,19 +32,19 @@ struct Provider: TimelineProvider {
             ])
             let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             let modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
-    
-            let habitLogs: [HabitLog] = try modelContainer.mainContext.fetch(FetchDescriptor<HabitLog>())
+            let modelContext = modelContainer.mainContext
             
-            let habitDataLogs = habitManager.fetchHabitLogsForPastWeek(logs: habitLogs)
+            let habitDataLogs = habitManager.fetchHabitLogsForPastWeek(modelContext: modelContext)
+            let habitLastWeekLogs = habitManager.fetchHabitLogsForPastTwoWeek(modelContext: modelContext)
             
             let currentDate = Date()
-            let entry = SimpleEntry(date: currentDate, habitDataLogs: habitDataLogs)
+            let entry = SimpleEntry(date: currentDate, habitDataLogs: habitDataLogs, habitLastWeekLogs: habitLastWeekLogs, modelContext: modelContext)
             
             let timeline = Timeline(entries: [entry], policy: .atEnd)
             completion(timeline)
         } catch {
             print("Failed to fetch HabitLog: \(error)")
-            let timeline = Timeline(entries: [SimpleEntry(date: Date(), habitDataLogs: [])], policy: .atEnd)
+            let timeline = Timeline(entries: [SimpleEntry(date: Date(), habitDataLogs: [], habitLastWeekLogs: [])], policy: .atEnd)
             completion(timeline)
         }
     }
@@ -53,16 +53,62 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let habitDataLogs: [HabitDataLog]
+    let habitLastWeekLogs: [HabitDataLog]
+    var modelContext: ModelContext? = nil
 }
 
 struct HabitWidgetEntryView: View {
     var entry: Provider.Entry
-
+    @State private var currentTab: CurrentTab = .thisWeek
+    var displayedScheduled: Int {
+        entry.habitDataLogs.reduce(0) { $0 + $1.scheduled }
+    }
+    
+    var displayedDone: Int {
+        entry.habitDataLogs.reduce(0) { $0 + $1.done }
+    }
+    
+    var displayedMissed: Int {
+        entry.habitDataLogs.reduce(0) { $0 + $1.missed }
+    }
+    
+    @Environment(\.widgetFamily) var family
+    @Environment(\.modelContext) var modelContext
+    
+    @ViewBuilder
     var body: some View {
-        VStack {
-            LineChartView(habitDataLogs: entry.habitDataLogs)
+        switch family {
+        case .systemSmall:
+            CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+        case .systemMedium:
+            HStack {
+                CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+                LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
+                    .frame(height: 120)
+            }
+        case .systemLarge:
+            VStack {
+                CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+                LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
+                    .frame(height: 120)
+            }
+        case .systemExtraLarge:
+            VStack {
+                CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+                LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
+                    .frame(height: 120)
+            }
+        case .accessoryCircular:
+            CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+        case .accessoryRectangular:
+            LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                 .frame(height: 80)
-                .padding()
+        case .accessoryInline:
+            LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
+                .frame(height: 80)
+        @unknown default:
+            LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
+                .frame(height: 100)
         }
     }
 }
@@ -85,13 +131,3 @@ struct HabitWidget: Widget {
         .description("Tracks the number of habits completed each day for the past week.")
     }
 }
-
-
-
-
-//
-//#Preview(as: .systemSmall) {
-//    HabitWidget()
-//} timeline: {
-//    SimpleEntry(date: .now, habitDataLogs: [])
-//}

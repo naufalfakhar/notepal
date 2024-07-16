@@ -38,6 +38,9 @@ struct MyNotesApp: App {
             ContentView()
                 .environmentObject(NavigationViewModel())
                 .modelContainer(sharedModelContainer)
+                .onAppear {
+                    habitManager.checkAndLogHabits(modelContext: sharedModelContainer.mainContext)
+                }
         }
     }
 }

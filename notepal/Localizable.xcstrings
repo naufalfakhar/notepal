@@ -4,6 +4,28 @@
     "" : {
 
     },
+    "(" : {
+
+    },
+    ")" : {
+
+    },
+    "%.2f%%" : {
+
+    },
+    "%@%@%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@%%"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
     "21" : {
 
     },
@@ -30,6 +52,9 @@
         }
       }
     },
+    "Check Habit Progress" : {
+
+    },
     "Clear All" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -42,6 +67,7 @@
       }
     },
     "Completed Habits" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -61,7 +87,11 @@
         }
       }
     },
+    "Current Week" : {
+
+    },
     "Daily" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -72,6 +102,7 @@
       }
     },
     "Date" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -80,6 +111,9 @@
           }
         }
       }
+    },
+    "Day" : {
+
     },
     "Delete" : {
 
@@ -120,10 +154,22 @@
     "Habit Tracker Widget" : {
 
     },
+    "Habits Done" : {
+
+    },
+    "Last Week" : {
+
+    },
+    "Missed" : {
+
+    },
     "My Action Plan" : {
 
     },
     "My Goals" : {
+
+    },
+    "My Habit Progression" : {
 
     },
     "New Note" : {
@@ -154,10 +200,14 @@
     "Notes" : {
 
     },
+    "Rate of completion = " : {
+
+    },
     "Regular Notes" : {
 
     },
     "Repeat" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -166,6 +216,9 @@
           }
         }
       }
+    },
+    "Scheduled" : {
+
     },
     "Search" : {
       "localizations" : {
@@ -178,6 +231,7 @@
       }
     },
     "Select" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -187,16 +241,25 @@
         }
       }
     },
+    "Select Tab" : {
+
+    },
     "Start adding notes" : {
 
     },
     "This is an example widget." : {
 
     },
+    "This Week" : {
+
+    },
     "Tracks the number of habits completed each day for the past week." : {
 
     },
     "Update Note" : {
+
+    },
+    "Weekly Analysis" : {
 
     },
     "What I Need" : {

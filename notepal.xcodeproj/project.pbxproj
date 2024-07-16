@@ -20,6 +20,16 @@
 		737C1C142C4646C6005DFC5C /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C132C4646C6005DFC5C /* HabitCard.swift */; };
 		73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */; };
 		73D4528F2C449178002555DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4528E2C449178002555DF /* AppDelegate.swift */; };
+		A7DF93692C466C3F00B6A4C7 /* CurrentTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93682C466C3F00B6A4C7 /* CurrentTab.swift */; };
+		A7DF936A2C466C3F00B6A4C7 /* CurrentTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93682C466C3F00B6A4C7 /* CurrentTab.swift */; };
+		A7DF936D2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF936C2C466C9700B6A4C7 /* LineChartDetailView.swift */; };
+		A7DF936E2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF936C2C466C9700B6A4C7 /* LineChartDetailView.swift */; };
+		A7DF93702C466CAA00B6A4C7 /* FireStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */; };
+		A7DF93712C466CAA00B6A4C7 /* FireStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */; };
+		A7DF93732C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */; };
+		A7DF93742C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */; };
+		A7DF93762C466D0900B6A4C7 /* CalculatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */; };
+		A7DF93772C466D0900B6A4C7 /* CalculatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */; };
 		A7FFB86D2C450AAD00D39B54 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */; };
 		A7FFB86F2C450AAD00D39B54 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */; };
 		A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */; };
@@ -100,6 +110,11 @@
 		737C1C132C4646C6005DFC5C /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
 		73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 		73D4528E2C449178002555DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7DF93682C466C3F00B6A4C7 /* CurrentTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTab.swift; sourceTree = "<group>"; };
+		A7DF936C2C466C9700B6A4C7 /* LineChartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDetailView.swift; sourceTree = "<group>"; };
+		A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStreakView.swift; sourceTree = "<group>"; };
+		A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLogViewModel.swift; sourceTree = "<group>"; };
+		A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedView.swift; sourceTree = "<group>"; };
 		A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -188,6 +203,7 @@
 		730DC5CA2C411D840093F816 /* notepal */ = {
 			isa = PBXGroup;
 			children = (
+				A7DF93672C466C2500B6A4C7 /* Actions */,
 				EF776CC42C41268B00C8D119 /* Info.plist */,
 				EF776D232C412BA200C8D119 /* Tools */,
 				EF776D0C2C412A2300C8D119 /* Components */,
@@ -213,6 +229,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A7DF93672C466C2500B6A4C7 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				A7DF93682C466C3F00B6A4C7 /* CurrentTab.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		A7DF936B2C466C8200B6A4C7 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				A7FFB8892C450B3A00D39B54 /* LineChartView.swift */,
+				A7DF936C2C466C9700B6A4C7 /* LineChartDetailView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		A7FFB86B2C450AAD00D39B54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,10 +259,11 @@
 			isa = PBXGroup;
 			children = (
 				A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */,
+				A7DF936B2C466C8200B6A4C7 /* Charts */,
 				A7FFB8732C450AAD00D39B54 /* HabitWidget.swift */,
+				A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */,
 				A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */,
 				A7FFB8752C450AAD00D39B54 /* AppIntent.swift */,
-				A7FFB8892C450B3A00D39B54 /* LineChartView.swift */,
 				A7FFB8772C450AAE00D39B54 /* Assets.xcassets */,
 				A7FFB8792C450AAE00D39B54 /* Info.plist */,
 			);
@@ -243,6 +277,7 @@
 				EF4AB5DE2C455357001448CF /* HabitViewModel.swift */,
 				EF4AB5E02C455357001448CF /* NoteViewModel.swift */,
 				EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */,
+				A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -275,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				EF776D202C412B1C00C8D119 /* TextView.swift */,
+				A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */,
 				EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */,
 				737C1C132C4646C6005DFC5C /* HabitCard.swift */,
 			);
@@ -422,14 +458,19 @@
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
+				A7DF93692C466C3F00B6A4C7 /* CurrentTab.swift in Sources */,
+				A7DF93762C466D0900B6A4C7 /* CalculatedView.swift in Sources */,
 				EF4AB5EA2C4663B9001448CF /* RegularNote.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
 				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
 				07BDD6472C465DB100691B93 /* UpdateNoteSheet.swift in Sources */,
+				A7DF93702C466CAA00B6A4C7 /* FireStreakView.swift in Sources */,
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
 				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
+				A7DF936D2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */,
+				A7DF93732C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */,
 				A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
 				73D4528F2C449178002555DF /* AppDelegate.swift in Sources */,
 				07BDD6432C465D7500691B93 /* RegularNoteView.swift in Sources */,
@@ -441,15 +482,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FFB8822C450AEC00D39B54 /* HabitModel.swift in Sources */,
+				A7DF936A2C466C3F00B6A4C7 /* CurrentTab.swift in Sources */,
+				A7DF936E2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */,
 				A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */,
 				A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */,
 				A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */,
+				A7DF93772C466D0900B6A4C7 /* CalculatedView.swift in Sources */,
 				A7FFB8742C450AAD00D39B54 /* HabitWidget.swift in Sources */,
 				A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */,
 				A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */,
 				A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
+				A7DF93712C466CAA00B6A4C7 /* FireStreakView.swift in Sources */,
 				A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */,
 				A7FFB8882C450AFD00D39B54 /* ChecklistModel.swift in Sources */,
+				A7DF93742C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */,
 				A7FFB8832C450AEF00D39B54 /* NoteLogModel.swift in Sources */,
 				A7FFB8762C450AAD00D39B54 /* AppIntent.swift in Sources */,
 				A7FFB88B2C450B3A00D39B54 /* LineChartView.swift in Sources */,
@@ -598,7 +644,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -618,7 +664,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -641,7 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -661,7 +707,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -682,7 +728,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HabitWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
@@ -694,7 +740,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepal.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -717,7 +763,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HabitWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
@@ -729,7 +775,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepal.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

@@ -69,6 +69,18 @@ struct HabitView: View {
         .navigationTitle("Habit Journey")
         .searchable(text: $searchValue, prompt: "Search")
         .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button(action: {
+                    // TODO: Daily Quest
+                }, label: {
+                    Image(systemName: "list.bullet")
+                })
+                NavigationLink {
+                    LineChartDetailView()
+                } label: {
+                    Image(systemName: "chart.xyaxis.line")
+                }
+            }
             ToolbarItemGroup(placement: .bottomBar) {
                 Button(action: {
                     showCreateSheet.toggle()

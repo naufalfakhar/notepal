@@ -11,6 +11,9 @@ import SwiftData
 struct HabitDataLog {
     var date: Date
     var habitCount: Int
+    var scheduled: Int
+    var done: Int
+    var missed: Int
 }
 
 struct HabitData: Identifiable {
@@ -29,7 +32,15 @@ class HabitManager: ObservableObject {
         ]
     }
     
-    @MainActor func fetchHabitLogsForPastWeek(logs: [HabitLog]) -> [HabitDataLog] {
+    func fetchHabitLogsForPastWeek(modelContext: ModelContext) -> [HabitDataLog]{
+        var logs: [HabitLog] = []
+        
+        do {
+            logs = try modelContext.fetch(FetchDescriptor<HabitLog>())
+        } catch {
+            print(error)
+        }
+        
         var calendar = Calendar.current
         calendar.timeZone = TimeZone.current
         
@@ -44,7 +55,44 @@ class HabitManager: ObservableObject {
         while currentDate < today {
             let logForDate = logsForPastWeek.filter { calendar.isDate($0.date, inSameDayAs: currentDate) }
             let habitCount = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.reduce(0) { $0 + ($1 ? 1 : 0) } }
-            habitDataLogs.append(HabitDataLog(date: currentDate, habitCount: habitCount))
+            let scheduled = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.count}
+            let done = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.filter { $0 }.count }
+            let missed = scheduled - done
+            habitDataLogs.append(HabitDataLog(date: currentDate, habitCount: habitCount, scheduled: scheduled, done: done, missed: missed))
+            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+        }
+        
+        return habitDataLogs
+    }
+    
+    func fetchHabitLogsForPastTwoWeek(modelContext: ModelContext) -> [HabitDataLog]{
+        var logs: [HabitLog] = []
+        
+        do {
+            logs = try modelContext.fetch(FetchDescriptor<HabitLog>())
+        } catch {
+            print(error)
+        }
+        
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        
+        let today = calendar.startOfDay(for: Date())
+        let lastWeek = calendar.date(byAdding: .day, value: -7, to: today)!
+        let oneWeekAgo = calendar.date(byAdding: .day, value: -14, to: today)!
+
+        let logsForPastWeek = logs.filter { $0.date >= oneWeekAgo && $0.date <= lastWeek }
+        
+        var habitDataLogs: [HabitDataLog] = []
+        var currentDate = oneWeekAgo
+        
+        while currentDate < lastWeek {
+            let logForDate = logsForPastWeek.filter { calendar.isDate($0.date, inSameDayAs: currentDate) }
+            let habitCount = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.reduce(0) { $0 + ($1 ? 1 : 0) } }
+            let scheduled = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.count}
+            let done = logForDate.reduce(0) { $0 + $1.habitCompleteLogs.filter { $0 }.count }
+            let missed = scheduled - done
+            habitDataLogs.append(HabitDataLog(date: currentDate, habitCount: habitCount, scheduled: scheduled, done: done, missed: missed))
             currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
         }
         
@@ -83,6 +131,12 @@ class HabitManager: ObservableObject {
         
 //        for i in 1...7 {
 //            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i, to: currentDate)!
+//            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
+//            modelContext.insert(habitData)
+//        }
+//
+//        for i in 1...7 {
+//            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i - 7, to: currentDate)!
 //            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
 //            modelContext.insert(habitData)
 //        }
