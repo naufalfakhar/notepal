@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0742A2E12C46175E00039CF5 /* AddNoteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2E02C46175E00039CF5 /* AddNoteSheet.swift */; };
+		0742A2E32C46176B00039CF5 /* NoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2E22C46176B00039CF5 /* NoteRowView.swift */; };
+		0742A2E52C46177900039CF5 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2E42C46177900039CF5 /* NoteListView.swift */; };
+		0742A2E72C46179600039CF5 /* EmptyNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2E62C46179600039CF5 /* EmptyNotesView.swift */; };
+		0742A2E92C4617C500039CF5 /* UpdateNoteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2E82C4617C500039CF5 /* UpdateNoteSheet.swift */; };
+		0742A2EB2C46183500039CF5 /* RegularNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742A2EA2C46183500039CF5 /* RegularNoteView.swift */; };
 		730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DC5CB2C411D840093F816 /* notepalApp.swift */; };
 		730DC5CE2C411D840093F816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DC5CD2C411D840093F816 /* ContentView.swift */; };
 		730DC5D02C411D860093F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5CF2C411D860093F816 /* Assets.xcassets */; };
@@ -86,6 +92,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0742A2E02C46175E00039CF5 /* AddNoteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteSheet.swift; sourceTree = "<group>"; };
+		0742A2E22C46176B00039CF5 /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
+		0742A2E42C46177900039CF5 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		0742A2E62C46179600039CF5 /* EmptyNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNotesView.swift; sourceTree = "<group>"; };
+		0742A2E82C4617C500039CF5 /* UpdateNoteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoteSheet.swift; sourceTree = "<group>"; };
+		0742A2EA2C46183500039CF5 /* RegularNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularNoteView.swift; sourceTree = "<group>"; };
 		730DC5C82C411D840093F816 /* notepal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notepal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		730DC5CB2C411D840093F816 /* notepalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepalApp.swift; sourceTree = "<group>"; };
 		730DC5CD2C411D840093F816 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +164,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0742A2DF2C4614D300039CF5 /* RegularNote */ = {
+			isa = PBXGroup;
+			children = (
+				0742A2E02C46175E00039CF5 /* AddNoteSheet.swift */,
+				0742A2E22C46176B00039CF5 /* NoteRowView.swift */,
+				0742A2E42C46177900039CF5 /* NoteListView.swift */,
+				0742A2E62C46179600039CF5 /* EmptyNotesView.swift */,
+				0742A2E82C4617C500039CF5 /* UpdateNoteSheet.swift */,
+				0742A2EA2C46183500039CF5 /* RegularNoteView.swift */,
+			);
+			name = RegularNote;
+			sourceTree = "<group>";
+		};
 		730DC5BF2C411D840093F816 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +184,7 @@
 				730DC5CA2C411D840093F816 /* notepal */,
 				A7FFB8702C450AAD00D39B54 /* HabitWidget */,
 				A7FFB86B2C450AAD00D39B54 /* Frameworks */,
+				0742A2DF2C4614D300039CF5 /* RegularNote */,
 				730DC5C92C411D840093F816 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,8 +208,8 @@
 				EF4AB5DD2C45533F001448CF /* ViewModels */,
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
-				730DC5CD2C411D840093F816 /* ContentView.swift */,
 				73D4528E2C449178002555DF /* AppDelegate.swift */,
+				730DC5CD2C411D840093F816 /* ContentView.swift */,
 				A7FFB8992C45141500D39B54 /* Localizable.xcstrings */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
 				730DC5D12C411D860093F816 /* notepal.entitlements */,
@@ -449,16 +475,22 @@
 				EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */,
 				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
+				0742A2E32C46176B00039CF5 /* NoteRowView.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
 				A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */,
+				0742A2E92C4617C500039CF5 /* UpdateNoteSheet.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
+				0742A2E12C46175E00039CF5 /* AddNoteSheet.swift in Sources */,
 				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
 				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
+				0742A2EB2C46183500039CF5 /* RegularNoteView.swift in Sources */,
 				A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */,
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
+				0742A2E52C46177900039CF5 /* NoteListView.swift in Sources */,
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
+				0742A2E72C46179600039CF5 /* EmptyNotesView.swift in Sources */,
 				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
 				EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */,
 				A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
