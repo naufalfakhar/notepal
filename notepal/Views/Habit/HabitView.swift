@@ -19,14 +19,13 @@ struct HabitView: View {
     @State private var folderTitleInput: String = ""
     
     var body: some View {
-        NavigationStack {
             VStack {
                 if !$habitViewModel.data.isEmpty || !$folderViewModel.data.isEmpty {
                     List {
                         ForEach($folderViewModel.data) { folder in
                             Section {
                                 NavigationLink {
-                                    // TODO: Navigate to Detail Folder
+                                    FolderDetailView(id: folder.id.uuidString)
                                 } label: {
                                     HStack {
                                         Image(systemName: "folder")
@@ -35,7 +34,7 @@ struct HabitView: View {
                                 }
                             }
                         }
-                        ForEach($habitViewModel.data) { habit in
+                        ForEach($habitViewModel.data.filter{$0.wrappedValue.folderId == nil}) { habit in
                             Section {
                                 NavigationLink {
                                     HabitDetailView(id: habit.id.uuidString)
@@ -84,36 +83,46 @@ struct HabitView: View {
                 
                 folderViewModel.fetchAll()
                 habitViewModel.fetchAll()
+                
             }
             .sheet(isPresented: $showCreateSheet, content: {
+                NavigationStack{
+                    VStack {
+                        TextField("Enter folder name", text: $folderTitleInput)
+                            .textFieldStyle(.roundedBorder)
+                            .padding()
+                        Spacer()
+                        
+//                        // Clearning All Data
+//                        Button{
+//                            habitViewModel.clearAll()
+//                        }label:{
+//                            Text("Clear All")
+//                        }
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                showCreateSheet = false
+                            }, label: {
+                                Text("Cancel")
+                            })
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: {
+                                folderViewModel.addFolder(newFolder: Folder(title: folderTitleInput))
+                                folderTitleInput = ""
+                                showCreateSheet = false
+                            }, label: {
+                                Text("Done")
+                            })
+                        }
+                    }
+                }
                 
-                VStack {
-                    TextField("Enter folder name", text: $folderTitleInput)
-                        .textFieldStyle(.roundedBorder)
-                        .padding()
-                    Spacer()
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            showCreateSheet = false
-                        }, label: {
-                            Text("Cancel")
-                        })
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            folderViewModel.addFolder(newFolder: Folder(title: folderTitleInput))
-                            folderTitleInput = ""
-                            showCreateSheet = false
-                        }, label: {
-                            Text("Done")
-                        })
-                    }
-                }
             })
         }
-    }
+    
 }
 
 #Preview {

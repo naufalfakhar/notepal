@@ -10,7 +10,9 @@ import EventKit
 import EventKitUI
 
 struct HabitDetailView: View {
-    var id:String?
+    var id: String?
+    var folderId: String?
+    
     @Environment(\.modelContext) var modelContext
     @StateObject private var viewModel = HabitViewModel()
     
@@ -134,14 +136,18 @@ struct HabitDetailView: View {
             if id != nil {
                 viewModel.fetchById(id: id!)
             }else{
-                viewModel.addHabit(newHabit: Habit(
+                let newHabit = Habit(
+                    folderId: folderId != nil ? UUID(uuidString: folderId!) : nil,
                     title: "New Title",
                     goal: "Do what you believe",
                     plan: [
                         Checklist(content: "Make your action plan"),
                         Checklist(content: "Another plan"),
-                    ])
+                    ]
                 )
+            
+                viewModel.addHabit(newHabit: newHabit)
+                viewModel.fetchById(id: newHabit.id.uuidString)
             }
         }
         
