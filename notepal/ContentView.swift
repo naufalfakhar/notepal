@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var searchValue = ""
-    @EnvironmentObject var navigationViewModel: NavigationViewModel
+//    @EnvironmentObject var navigationViewModel: NavigationViewModel
 
     var body: some View {
         NavigationStack{
-            switch navigationViewModel.currentDestination {
-            case .home:
+//            switch navigationViewModel.currentDestination {
+//            case .home:
                 List{
                     Section{
                         NavigationLink{
@@ -32,6 +32,7 @@ struct ContentView: View {
                         NavigationLink{
                             HabitView()
                                 .toolbarRole(.editor)
+                                .navigationBarTitleDisplayMode(.inline)
                         }label:{
                             HStack{
                                 Image(systemName: "folder")
@@ -44,24 +45,25 @@ struct ContentView: View {
                 .navigationTitle("NotePal")
                 .searchable(text: $searchValue, prompt: "Search")
                 
-                case .detail(let data):
-                    HabitDetailView(id: data)
-            }
-        }.onOpenURL{ url in
-            guard url.scheme == "mynotes" else {return}
-            
-            if let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
-                var newParams: [String: String] = [:]
-                for queryItem in queryItems {
-                    newParams[queryItem.name] = queryItem.value
-                }
-                
-                navigationViewModel.navigateToDetail(with: newParams["id"] ?? "")
-            }
+//                case .detail(let data):
+//                    HabitDetailView(id: data)
+//            }
+//        }.onOpenURL{ url in
+//            guard url.scheme == "mynotes" else {return}
+//            
+//            if let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems {
+//                var newParams: [String: String] = [:]
+//                for queryItem in queryItems {
+//                    newParams[queryItem.name] = queryItem.value
+//                }
+//                
+//                navigationViewModel.navigateToDetail(with: newParams["id"] ?? "")
+//            }
         }
     }
 }
 
 #Preview {
     ContentView()
+//        .environmentObject(NavigationViewModel())
 }

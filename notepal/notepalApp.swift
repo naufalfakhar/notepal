@@ -10,17 +10,16 @@ import SwiftData
 
 @main
 struct MyNotesApp: App {
-    @StateObject private var habitManager = HabitManager()
+    
     private var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Note.self,
-            NoteLog.self,
-            HabitCategory.self,
             Habit.self,
             Folder.self,
-            Checklist.self,
-            HabitLog.self,
+            Note.self,
+            NoteLog.self,
+            Checklist.self
         ])
+        
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         
         do {

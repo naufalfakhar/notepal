@@ -15,24 +15,31 @@ class Habit: Identifiable{
     var note: Note
     var title: String
     var goal: String
-    var plans: [Checklist]
-    var isCompleted: Bool
+//    var plan: String
+//    var need: String
+    var plans: [Checklist]?
+    var isCompleted: Bool?
     
     init(
         id: UUID = UUID(),
         folderId: UUID? = nil,
+        note: Note = Note(),
         title: String,
         goal: String,
-        plan: [Checklist],
-        note: Note = Note(),
+//        plan: String,
+//        need: String,
+        plans: [Checklist] = [],
         isCompleted: Bool = false
     ) {
         self.id = id
         self.folderId = folderId
+        
+        self.note = note
         self.title = title
         self.goal = goal
-        self.plans = plan
-        self.note = note
+//        self.plan = plan
+//        self.need = need
+        self.plans = plans
         self.isCompleted = isCompleted
     }
 }

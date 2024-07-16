@@ -1,4 +1,3 @@
-
 //
 //  NoteLogModel.swift
 //  notes

@@ -18,18 +18,18 @@ struct FolderCard: View {
     @State var isExpanded: Bool = false
     
     var body: some View {
-        DisclosureGroup(model.title, isExpanded: $isExpanded){
-            ForEach(folderData.filter { $0.parentId == model.id }) { subFolder in
-                Self(
-                    model: .constant(subFolder),
-                    folderData: $folderData,
-                    data: $data
-                )
-            }
+//        DisclosureGroup(model.title, isExpanded: $isExpanded){
+//            ForEach(folderData.filter { $0.parentId == model.id }) { subFolder in
+//                Self(
+//                    model: .constant(subFolder),
+//                    folderData: $folderData,
+//                    data: $data
+//                )
+//            }
             
             ForEach(data.filter{$0.folderId == model.id}) { note in
                 HabitCard(model: .constant(note))
             }
-        }.padding()
+//        }.padding()
     }
 }

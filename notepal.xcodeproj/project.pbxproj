@@ -11,65 +11,21 @@
 		730DC5CE2C411D840093F816 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DC5CD2C411D840093F816 /* ContentView.swift */; };
 		730DC5D02C411D860093F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5CF2C411D860093F816 /* Assets.xcassets */; };
 		730DC5D42C411D860093F816 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DC5D32C411D860093F816 /* Preview Assets.xcassets */; };
-		73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */; };
+		731260622C45B6570000FFF2 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731260612C45B6570000FFF2 /* HabitViewModel.swift */; };
+		731260642C45B65F0000FFF2 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731260632C45B65F0000FFF2 /* FolderViewModel.swift */; };
+		737C1C0A2C462B9E005DFC5C /* DetailHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C092C462B9E005DFC5C /* DetailHabitView.swift */; };
+		737C1C0C2C463AF8005DFC5C /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C0B2C463AF8005DFC5C /* ChecklistModel.swift */; };
+		737C1C0E2C463B19005DFC5C /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C0D2C463B19005DFC5C /* HabitModel.swift */; };
+		737C1C102C463B2E005DFC5C /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C0F2C463B2E005DFC5C /* NoteModel.swift */; };
+		737C1C122C463B3D005DFC5C /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C1C112C463B3D005DFC5C /* NoteLogModel.swift */; };
 		73D4528F2C449178002555DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4528E2C449178002555DF /* AppDelegate.swift */; };
-		A7FFB86D2C450AAD00D39B54 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */; };
-		A7FFB86F2C450AAD00D39B54 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */; };
-		A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */; };
-		A7FFB8742C450AAD00D39B54 /* HabitWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8732C450AAD00D39B54 /* HabitWidget.swift */; };
-		A7FFB8762C450AAD00D39B54 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8752C450AAD00D39B54 /* AppIntent.swift */; };
-		A7FFB8782C450AAE00D39B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8772C450AAE00D39B54 /* Assets.xcassets */; };
-		A7FFB87C2C450AAE00D39B54 /* HabitWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D242C412BB200C8D119 /* HabitManager.swift */; };
-		A7FFB8822C450AEC00D39B54 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCC2C4129D200C8D119 /* HabitModel.swift */; };
-		A7FFB8832C450AEF00D39B54 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
-		A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCD2C4129D200C8D119 /* NoteModel.swift */; };
-		A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */; };
-		A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
-		A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCE2C4129D200C8D119 /* FolderModel.swift */; };
-		A7FFB8882C450AFD00D39B54 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
-		A7FFB88A2C450B3A00D39B54 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8892C450B3A00D39B54 /* LineChartView.swift */; };
-		A7FFB88B2C450B3A00D39B54 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8892C450B3A00D39B54 /* LineChartView.swift */; };
-		A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */; };
-		A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */; };
-		A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
-		A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
-		A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
-		A7FFB8982C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
+		73DF1C3F2C45881C00C83BE0 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF1C3E2C45881C00C83BE0 /* HabitView.swift */; };
+		73DF1C432C45929F00C83BE0 /* CreateHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF1C422C45929F00C83BE0 /* CreateHabitView.swift */; };
+		73DF1C452C459DF500C83BE0 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF1C442C459DF500C83BE0 /* EventEditViewController.swift */; };
 		A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
-		A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
-		EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DE2C455357001448CF /* HabitViewModel.swift */; };
 		EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */; };
-		EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E02C455357001448CF /* NoteViewModel.swift */; };
-		EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E42C455425001448CF /* FolderViewModel.swift */; };
-		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
-		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
-		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
-		EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */; };
-		EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCC2C4129D200C8D119 /* HabitModel.swift */; };
-		EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCD2C4129D200C8D119 /* NoteModel.swift */; };
 		EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCE2C4129D200C8D119 /* FolderModel.swift */; };
-		EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */; };
-		EF776D142C412AB800C8D119 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D122C412AB800C8D119 /* HabitView.swift */; };
-		EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D172C412AF700C8D119 /* HabitCard.swift */; };
-		EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D182C412AF700C8D119 /* FolderCard.swift */; };
-		EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1B2C412B0F00C8D119 /* NoteView.swift */; };
-		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
-		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
-		EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D242C412BB200C8D119 /* HabitManager.swift */; };
-		EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */; };
-		EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D282C412D5B00C8D119 /* SpeechButton.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A7FFB87A2C450AAE00D39B54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 730DC5C02C411D840093F816 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7FFB8692C450AAD00D39B54;
-			remoteInfo = HabitWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A7FFB87D2C450AAE00D39B54 /* Embed Foundation Extensions */ = {
@@ -78,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A7FFB87C2C450AAE00D39B54 /* HabitWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,44 +47,23 @@
 		730DC5CF2C411D860093F816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		730DC5D12C411D860093F816 /* notepal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepal.entitlements; sourceTree = "<group>"; };
 		730DC5D32C411D860093F816 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		731260612C45B6570000FFF2 /* HabitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HabitViewModel.swift; path = ../../../../../.Trash/HabitViewModel.swift; sourceTree = "<group>"; };
+		731260632C45B65F0000FFF2 /* FolderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderViewModel.swift; path = ../../../../../.Trash/FolderViewModel.swift; sourceTree = "<group>"; };
+		737C1C092C462B9E005DFC5C /* DetailHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHabitView.swift; sourceTree = "<group>"; };
+		737C1C0B2C463AF8005DFC5C /* ChecklistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
+		737C1C0D2C463B19005DFC5C /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
+		737C1C0F2C463B2E005DFC5C /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		737C1C112C463B3D005DFC5C /* NoteLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
 		73D4528E2C449178002555DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DF1C3E2C45881C00C83BE0 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		73DF1C422C45929F00C83BE0 /* CreateHabitView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitView.swift; sourceTree = "<group>"; tabWidth = 4; };
+		73DF1C442C459DF500C83BE0 /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
 		A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitWidgetBundle.swift; sourceTree = "<group>"; };
-		A7FFB8732C450AAD00D39B54 /* HabitWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitWidget.swift; sourceTree = "<group>"; };
-		A7FFB8752C450AAD00D39B54 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		A7FFB8772C450AAE00D39B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7FFB8792C450AAE00D39B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7FFB8892C450B3A00D39B54 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
-		A7FFB88C2C450BFE00D39B54 /* HabitWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitWidgetExtension.entitlements; sourceTree = "<group>"; };
-		A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDailyWidget.swift; sourceTree = "<group>"; };
-		A7FFB8932C450CB400D39B54 /* HabitCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardView.swift; sourceTree = "<group>"; };
-		A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardViewModel.swift; sourceTree = "<group>"; };
 		A7FFB8992C45141500D39B54 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		EF4AB5DE2C455357001448CF /* HabitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
-		EF4AB5E02C455357001448CF /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
-		EF4AB5E42C455425001448CF /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
-		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
-		EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCategoryModel.swift; sourceTree = "<group>"; };
-		EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitLogModel.swift; sourceTree = "<group>"; };
-		EF776CCC2C4129D200C8D119 /* HabitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
-		EF776CCD2C4129D200C8D119 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		EF776CCE2C4129D200C8D119 /* FolderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
-		EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleCheckboxStyle.swift; sourceTree = "<group>"; };
-		EF776D122C412AB800C8D119 /* HabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
-		EF776D172C412AF700C8D119 /* HabitCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
-		EF776D182C412AF700C8D119 /* FolderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
-		EF776D1B2C412B0F00C8D119 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
-		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
-		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		EF776D242C412BB200C8D119 /* HabitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitManager.swift; sourceTree = "<group>"; };
-		EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		EF776D282C412D5B00C8D119 /* SpeechButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,24 +74,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7FFB8672C450AAD00D39B54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A7FFB86F2C450AAD00D39B54 /* SwiftUI.framework in Frameworks */,
-				A7FFB86D2C450AAD00D39B54 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		730DC5BF2C411D840093F816 = {
 			isa = PBXGroup;
 			children = (
-				A7FFB88C2C450BFE00D39B54 /* HabitWidgetExtension.entitlements */,
 				730DC5CA2C411D840093F816 /* notepal */,
-				A7FFB8702C450AAD00D39B54 /* HabitWidget */,
 				A7FFB86B2C450AAD00D39B54 /* Frameworks */,
 				730DC5C92C411D840093F816 /* Products */,
 			);
@@ -167,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				730DC5C82C411D840093F816 /* notepal.app */,
-				A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,14 +98,13 @@
 			isa = PBXGroup;
 			children = (
 				EF776CC42C41268B00C8D119 /* Info.plist */,
-				EF776CC02C41260200C8D119 /* Configs */,
 				EF776CBE2C4125C400C8D119 /* Models */,
-				EF776D232C412BA200C8D119 /* Tools */,
 				EF4AB5DD2C45533F001448CF /* ViewModels */,
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
 				73D4528E2C449178002555DF /* AppDelegate.swift */,
+				73DF1C442C459DF500C83BE0 /* EventEditViewController.swift */,
 				A7FFB8992C45141500D39B54 /* Localizable.xcstrings */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
 				730DC5D12C411D860093F816 /* notepal.entitlements */,
@@ -209,49 +130,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A7FFB8702C450AAD00D39B54 /* HabitWidget */ = {
-			isa = PBXGroup;
-			children = (
-				A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */,
-				A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */,
-				A7FFB8732C450AAD00D39B54 /* HabitWidget.swift */,
-				A7FFB8752C450AAD00D39B54 /* AppIntent.swift */,
-				A7FFB8892C450B3A00D39B54 /* LineChartView.swift */,
-				A7FFB8772C450AAE00D39B54 /* Assets.xcassets */,
-				A7FFB8792C450AAE00D39B54 /* Info.plist */,
-			);
-			path = HabitWidget;
-			sourceTree = "<group>";
-		};
 		EF4AB5DD2C45533F001448CF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EF4AB5E42C455425001448CF /* FolderViewModel.swift */,
-				EF4AB5DE2C455357001448CF /* HabitViewModel.swift */,
-				EF4AB5E02C455357001448CF /* NoteViewModel.swift */,
+				731260632C45B65F0000FFF2 /* FolderViewModel.swift */,
+				731260612C45B6570000FFF2 /* HabitViewModel.swift */,
 				EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		EF4AB5E62C455832001448CF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		EF776CBE2C4125C400C8D119 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EF776CC82C4129D200C8D119 /* ChecklistModel.swift */,
 				EF776CCE2C4129D200C8D119 /* FolderModel.swift */,
-				EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */,
-				EF776CCB2C4129D200C8D119 /* HabitLogModel.swift */,
-				EF776CCC2C4129D200C8D119 /* HabitModel.swift */,
-				EF776CC92C4129D200C8D119 /* NoteLogModel.swift */,
-				EF776CCD2C4129D200C8D119 /* NoteModel.swift */,
+				737C1C0D2C463B19005DFC5C /* HabitModel.swift */,
+				737C1C0F2C463B2E005DFC5C /* NoteModel.swift */,
+				737C1C112C463B3D005DFC5C /* NoteLogModel.swift */,
+				737C1C0B2C463AF8005DFC5C /* ChecklistModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,74 +156,18 @@
 			isa = PBXGroup;
 			children = (
 				EF776D0D2C412A2300C8D119 /* Habit */,
-				EF776D0F2C412A2300C8D119 /* Note */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		EF776CC02C41260200C8D119 /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				EF776CC12C41260800C8D119 /* Styles */,
-			);
-			path = Configs;
-			sourceTree = "<group>";
-		};
-		EF776CC12C41260800C8D119 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				EF776CD62C4129DF00C8D119 /* ToggleCheckboxStyle.swift */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
-		EF776D0C2C412A2300C8D119 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				A7FFB8932C450CB400D39B54 /* HabitCardView.swift */,
-				EF776D282C412D5B00C8D119 /* SpeechButton.swift */,
-				EF776D182C412AF700C8D119 /* FolderCard.swift */,
-				EF776D172C412AF700C8D119 /* HabitCard.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		EF776D0D2C412A2300C8D119 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
-				EF4AB5E62C455832001448CF /* Views */,
-				EF776D0C2C412A2300C8D119 /* Components */,
-				EF776D122C412AB800C8D119 /* HabitView.swift */,
-				A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */,
+				73DF1C3E2C45881C00C83BE0 /* HabitView.swift */,
+				737C1C092C462B9E005DFC5C /* DetailHabitView.swift */,
+				73DF1C422C45929F00C83BE0 /* CreateHabitView.swift */,
 			);
 			path = Habit;
-			sourceTree = "<group>";
-		};
-		EF776D0E2C412A2300C8D119 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */,
-				EF776D202C412B1C00C8D119 /* TextView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		EF776D0F2C412A2300C8D119 /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				EF776D0E2C412A2300C8D119 /* Components */,
-				EF776D1B2C412B0F00C8D119 /* NoteView.swift */,
-			);
-			path = Note;
-			sourceTree = "<group>";
-		};
-		EF776D232C412BA200C8D119 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				EF776D242C412BB200C8D119 /* HabitManager.swift */,
-				EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */,
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,29 +185,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7FFB87B2C450AAE00D39B54 /* PBXTargetDependency */,
 			);
 			name = notepal;
 			productName = notepal;
 			productReference = 730DC5C82C411D840093F816 /* notepal.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A7FFB8692C450AAD00D39B54 /* HabitWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7FFB8802C450AAE00D39B54 /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */;
-			buildPhases = (
-				A7FFB8662C450AAD00D39B54 /* Sources */,
-				A7FFB8672C450AAD00D39B54 /* Frameworks */,
-				A7FFB8682C450AAD00D39B54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HabitWidgetExtension;
-			productName = HabitWidgetExtension;
-			productReference = A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -381,9 +203,6 @@
 				TargetAttributes = {
 					730DC5C72C411D840093F816 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					A7FFB8692C450AAD00D39B54 = {
-						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -402,7 +221,6 @@
 			projectRoot = "";
 			targets = (
 				730DC5C72C411D840093F816 /* notepal */,
-				A7FFB8692C450AAD00D39B54 /* HabitWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -418,15 +236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7FFB8682C450AAD00D39B54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */,
-				A7FFB8782C450AAE00D39B54 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,69 +243,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */,
-				EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */,
-				EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */,
-				EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */,
+				731260622C45B6570000FFF2 /* HabitViewModel.swift in Sources */,
+				737C1C122C463B3D005DFC5C /* NoteLogModel.swift in Sources */,
 				EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */,
-				EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */,
-				EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */,
-				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
-				EF776CD72C4129DF00C8D119 /* ToggleCheckboxStyle.swift in Sources */,
+				73DF1C3F2C45881C00C83BE0 /* HabitView.swift in Sources */,
+				737C1C102C463B2E005DFC5C /* NoteModel.swift in Sources */,
 				730DC5CE2C411D840093F816 /* ContentView.swift in Sources */,
-				A7FFB88A2C450B3A00D39B54 /* LineChartView.swift in Sources */,
-				EF776D1A2C412AF700C8D119 /* FolderCard.swift in Sources */,
-				EF776CD32C4129D200C8D119 /* HabitModel.swift in Sources */,
-				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
-				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
-				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
-				A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */,
-				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
-				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
-				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
-				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,
+				73DF1C452C459DF500C83BE0 /* EventEditViewController.swift in Sources */,
+				737C1C0C2C463AF8005DFC5C /* ChecklistModel.swift in Sources */,
+				737C1C0E2C463B19005DFC5C /* HabitModel.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
-				A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */,
-				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
+				737C1C0A2C462B9E005DFC5C /* DetailHabitView.swift in Sources */,
+				73DF1C432C45929F00C83BE0 /* CreateHabitView.swift in Sources */,
+				731260642C45B65F0000FFF2 /* FolderViewModel.swift in Sources */,
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
-				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
-				EF776D192C412AF700C8D119 /* HabitCard.swift in Sources */,
-				A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
 				73D4528F2C449178002555DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7FFB8662C450AAD00D39B54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A7FFB8822C450AEC00D39B54 /* HabitModel.swift in Sources */,
-				A7FFB8982C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */,
-				A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */,
-				A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */,
-				A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */,
-				A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */,
-				A7FFB8742C450AAD00D39B54 /* HabitWidget.swift in Sources */,
-				A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */,
-				A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */,
-				A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
-				A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */,
-				A7FFB8882C450AFD00D39B54 /* ChecklistModel.swift in Sources */,
-				A7FFB8832C450AEF00D39B54 /* NoteLogModel.swift in Sources */,
-				A7FFB8762C450AAD00D39B54 /* AppIntent.swift in Sources */,
-				A7FFB88B2C450B3A00D39B54 /* LineChartView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A7FFB87B2C450AAE00D39B54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7FFB8692C450AAD00D39B54 /* HabitWidgetExtension */;
-			targetProxy = A7FFB87A2C450AAE00D39B54 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		730DC5D52C411D860093F816 /* Debug */ = {
@@ -630,7 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -650,7 +415,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanothree.notepal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -673,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -693,7 +458,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanothree.notepal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -702,77 +467,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A7FFB87E2C450AAE00D39B54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = HabitWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HabitWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A7FFB87F2C450AAE00D39B54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = HabitWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HabitWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -793,15 +487,6 @@
 			buildConfigurations = (
 				730DC5D82C411D860093F816 /* Debug */,
 				730DC5D92C411D860093F816 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7FFB8802C450AAE00D39B54 /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7FFB87E2C450AAE00D39B54 /* Debug */,
-				A7FFB87F2C450AAE00D39B54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

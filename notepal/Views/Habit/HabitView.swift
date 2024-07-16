@@ -1,117 +1,134 @@
 //
 //  HabitView.swift
-//  notes
+//  notepal
 //
-//  Created by Dason Tiovino on 09/07/24.
+//  Created by ahmad naufal alfakhar on 15/07/24.
 //
 
 import SwiftUI
-import SwiftData
 
 struct HabitView: View {
     @Environment(\.modelContext) var modelContext
     
-    @StateObject private var habitViewModel = HabitViewModel()
-    @StateObject private var folderViewModel = FolderViewModel()
-    @State private var searchValue = ""
+    @State private var habitVM = HabitViewModel()
+    @State private var folderVM = FolderViewModel()
     
+    @State private var searchValue = ""
     @State private var showCreateSheet = false
-    @State private var folderTitleInput: String = ""
+    @State private var newFolderTitle: String = ""
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                if !$habitViewModel.data.isEmpty || !$folderViewModel.data.isEmpty {
-                    List {
-                        ForEach($folderViewModel.data) { folder in
-                            Section {
-                                NavigationLink {
-                                    // TODO: Navigate to Detail Folder
-                                } label: {
-                                    HStack {
-                                        Image(systemName: "folder")
-                                        Text(folder.title.wrappedValue)
-                                    }
+        VStack {
+            if !$habitVM.data.isEmpty || !$folderVM.data.isEmpty {
+                List {
+                    ForEach($folderVM.data) { folder in
+                        Section {
+                            NavigationLink {
+                                // TODO: Navigate to Detail Folder
+                            } label: {
+                                HStack {
+                                    Image(systemName: "folder")
+                                    Text(folder.title.wrappedValue)
                                 }
                             }
                         }
-                        ForEach($habitViewModel.data) { habit in
-                            Section {
-                                NavigationLink {
-                                    HabitDetailView(id: habit.id.uuidString)
-                                } label: {
-                                    HStack {
-                                        Text(habit.title.wrappedValue)
+                        .swipeActions {
+                            Button(role: .destructive, action: {
+                                folderVM.deleteFolder(id: folder.id.wrappedValue.uuidString)
+                            }, label: {
+                                Label("Delete", systemImage: "trash")
+                            })
+                        }
+                    }
+                    ForEach($habitVM.data) { habit in
+                        Section {
+                            NavigationLink {
+                                DetailHabitView(habit: habit.wrappedValue)
+                                    .toolbarRole(.editor)
+                                    .navigationBarTitleDisplayMode(.inline)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "note.text")
+                                    Text(habit.title.wrappedValue)
+                                    Spacer()
+                                    Text("5")
+                                    ZStack{
+                                        Image(systemName: "flame")
+                                            .foregroundStyle(.linearGradient(colors: [.orange, .red], startPoint: .top, endPoint: .bottom))
+                                        Image(systemName: "flame.fill")
+                                            .foregroundStyle(.linearGradient(colors: [.orange, .red], startPoint: .top, endPoint: .bottom))
                                     }
                                 }
                             }
                         }
                         .swipeActions {
-                            Button(action: {
-                                // TODO: Delete Action
+                            Button(role: .destructive, action: {
+                                habitVM.deleteHabit(id: habit.id.wrappedValue.uuidString)
                             }, label: {
-                                Image(systemName: "trash")
+                                Label("Delete", systemImage: "trash")
                             })
-                            .tint(.red)
                         }
                     }
-                    .listSectionSpacing(.compact)
-                } else {
-                    Text("No items yet.")
-                        .foregroundColor(.gray)
+                    
+                }
+                .listSectionSpacing(.compact)
+            } else {
+                Text("No items yet.")
+                    .foregroundColor(.gray)
+            }
+        }
+        .navigationTitle("Habit Journey")
+        .searchable(text: $searchValue, prompt: "Search")
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Button(action: {
+                    showCreateSheet.toggle()
+                }, label: {
+                    Image(systemName: "folder.badge.plus")
+                })
+                NavigationLink {
+                    CreateHabitView()
+                        .toolbarRole(.editor)
+                        .navigationBarTitleDisplayMode(.inline)
+                } label: {
+                    Image(systemName: "square.and.pencil")
                 }
             }
-            .navigationTitle("Habit Journey")
-            .searchable(text: $searchValue, prompt: "Search")
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: {
-                        showCreateSheet.toggle()
-                    }, label: {
-                        Image(systemName: "folder.badge.plus")
-                    })
-                    NavigationLink {
-                        HabitDetailView()
-                            .toolbarRole(.editor)
-                    } label: {
-                        Image(systemName: "square.and.pencil")
-                    }
-                }
-            }
-            .onAppear {
-                habitViewModel.modelContext = modelContext
-                folderViewModel.modelContext = modelContext
-                
-                folderViewModel.fetchAll()
-                habitViewModel.fetchAll()
-            }
-            .sheet(isPresented: $showCreateSheet, content: {
-                
+        }
+        .sheet(isPresented: $showCreateSheet) {
+            NavigationStack {
                 VStack {
-                    TextField("Enter folder name", text: $folderTitleInput)
+                    TextField("New Folder", text: $newFolderTitle)
                         .textFieldStyle(.roundedBorder)
-                        .padding()
                     Spacer()
                 }
+                .padding()
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItemGroup(placement: .topBarLeading) {
                         Button(action: {
                             showCreateSheet = false
                         }, label: {
                             Text("Cancel")
                         })
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItemGroup(placement: .topBarTrailing) {
                         Button(action: {
-                            folderViewModel.addFolder(newFolder: Folder(title: folderTitleInput))
-                            folderTitleInput = ""
+                            folderVM.addFolder(newFolder: Folder(title: newFolderTitle))
+                            newFolderTitle = ""
                             showCreateSheet = false
                         }, label: {
                             Text("Done")
                         })
                     }
                 }
-            })
+            }
+        }
+        .onAppear {
+            folderVM.modelContext = modelContext
+            habitVM.modelContext = modelContext
+            
+            folderVM.fetchAll()
+            habitVM.fetchAll()
         }
     }
 }
@@ -120,13 +137,11 @@ struct HabitView: View {
     NavigationStack {
         HabitView()
             .modelContainer(for: [
+                Habit.self,
+                Folder.self,
                 Note.self,
                 NoteLog.self,
-                HabitCategory.self,
-                Habit.self,
-                HabitLog.self,
-                Folder.self,
-                Checklist.self,
+                Checklist.self
             ])
     }
 }

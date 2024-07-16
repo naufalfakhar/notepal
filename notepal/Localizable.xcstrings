@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "5" : {
+
+    },
     "Add to Calendar" : {
       "localizations" : {
         "id" : {
@@ -36,6 +39,7 @@
       }
     },
     "Completed Habits" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -46,6 +50,7 @@
       }
     },
     "Configuration" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -56,6 +61,7 @@
       }
     },
     "Daily" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -66,6 +72,7 @@
       }
     },
     "Date" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -74,6 +81,9 @@
           }
         }
       }
+    },
+    "Delete" : {
+
     },
     "Done" : {
       "localizations" : {
@@ -85,7 +95,11 @@
         }
       }
     },
+    "Edit Calendar Event" : {
+
+    },
     "Enter folder name" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -96,6 +110,7 @@
       }
     },
     "Favorite Emoji" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -108,16 +123,13 @@
     "Habit Journey" : {
 
     },
-    "Habit Tracker Widget" : {
-
-    },
-    "Loading..." : {
-
-    },
     "My Action Plan" : {
 
     },
     "My Goals" : {
+
+    },
+    "New Folder" : {
 
     },
     "No items yet." : {
@@ -130,9 +142,6 @@
         }
       }
     },
-    "No Notes with This Id" : {
-
-    },
     "NotePal" : {
 
     },
@@ -140,6 +149,7 @@
 
     },
     "Repeat" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -160,6 +170,7 @@
       }
     },
     "Select" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -169,14 +180,7 @@
         }
       }
     },
-    "This is an example widget." : {
-
-    },
-    "Tracks the number of habits completed each day for the past week." : {
-
-    },
     "What I Need" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
