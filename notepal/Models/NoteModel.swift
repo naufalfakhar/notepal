@@ -12,22 +12,12 @@ import SwiftData
 class Note: Identifiable{
     var id: UUID
     var contents: [NoteLog]
-//    var title: String
-//    var noteBody: String
-//    var date: Date
     
     init(
         id: UUID = UUID(),
         contents: [NoteLog] = [NoteLog()]
-//        title: String,
-//        noteBody: String,
-//        date: Date
     ) {
         self.id = id
-        self.contents = contents
-//        self.title = title
-//        self.noteBody = noteBody
-//        self.date = date
-        
+        self.contents = contents    
     }
 }
