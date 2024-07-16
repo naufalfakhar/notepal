@@ -46,6 +46,7 @@
 		EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E02C455357001448CF /* NoteViewModel.swift */; };
 		EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E42C455425001448CF /* FolderViewModel.swift */; };
 		EF4AB5E82C462564001448CF /* FolderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E72C462564001448CF /* FolderDetailView.swift */; };
+		EF4AB5EA2C4663B9001448CF /* RegularNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E92C4663B9001448CF /* RegularNote.swift */; };
 		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
 		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
 		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
@@ -118,6 +119,7 @@
 		EF4AB5E02C455357001448CF /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5E42C455425001448CF /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5E72C462564001448CF /* FolderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailView.swift; sourceTree = "<group>"; };
+		EF4AB5E92C4663B9001448CF /* RegularNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularNote.swift; sourceTree = "<group>"; };
 		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
 		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				EF776CCC2C4129D200C8D119 /* HabitModel.swift */,
 				EF776CC92C4129D200C8D119 /* NoteLogModel.swift */,
 				EF776CCD2C4129D200C8D119 /* NoteModel.swift */,
+				EF4AB5E92C4663B9001448CF /* RegularNote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
+				EF4AB5EA2C4663B9001448CF /* RegularNote.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
 				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
 				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,

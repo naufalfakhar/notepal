@@ -8,9 +8,9 @@ import SwiftUI
 import SwiftData
 
 struct RegularNoteView: View {
-    @Query(sort: \Note.date) var notes: [Note]
+    @Query(sort: \RegularNote.date) var notes: [RegularNote]
     @Environment(\.modelContext) var context
-    @State private var noteToEdit: Note?
+    @State private var noteToEdit: RegularNote?
     
     var body: some View {
         NavigationStack {

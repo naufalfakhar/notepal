@@ -20,6 +20,7 @@ struct MyNotesApp: App {
             Folder.self,
             Checklist.self,
             HabitLog.self,
+            RegularNote.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         

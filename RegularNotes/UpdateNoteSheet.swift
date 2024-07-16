@@ -4,7 +4,7 @@ import SwiftData
 struct UpdateNoteSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
-    @Bindable var note: Note
+    @Bindable var note: RegularNote
     
     var body: some View {
         NavigationStack {

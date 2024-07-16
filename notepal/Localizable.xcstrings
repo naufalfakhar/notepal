@@ -7,6 +7,9 @@
     "21" : {
 
     },
+    "Add Note" : {
+
+    },
     "Add to Calendar" : {
       "localizations" : {
         "id" : {
@@ -123,6 +126,9 @@
     "My Goals" : {
 
     },
+    "New Note" : {
+
+    },
     "No items yet." : {
       "localizations" : {
         "id" : {
@@ -133,10 +139,19 @@
         }
       }
     },
+    "No Notes" : {
+
+    },
     "No Notes with This Id" : {
 
     },
+    "Note title" : {
+
+    },
     "NotePal" : {
+
+    },
+    "Notes" : {
 
     },
     "Regular Notes" : {
@@ -172,10 +187,16 @@
         }
       }
     },
+    "Start adding notes" : {
+
+    },
     "This is an example widget." : {
 
     },
     "Tracks the number of habits completed each day for the past week." : {
+
+    },
+    "Update Note" : {
 
     },
     "What I Need" : {
@@ -188,6 +209,9 @@
           }
         }
       }
+    },
+    "Write Something" : {
+
     }
   },
   "version" : "1.0"
