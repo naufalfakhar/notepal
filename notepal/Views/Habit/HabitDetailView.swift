@@ -25,6 +25,8 @@ struct HabitDetailView: View {
     @StateObject private var viewModel = HabitViewModel()
     
     @State private var showEventEditor = false
+
+    @State private var selectedEvent: EKEvent?
     @State private var eventStore = EKEventStore()
     
     func requestAccessToCalendar() {
@@ -40,32 +42,31 @@ struct HabitDetailView: View {
     }
     
     func createCalendarEvent() {
-        let event = EKEvent(eventStore: eventStore)
-        event.title = viewModel.data[0].title
-        //        event.notes = "\(myGoalsDesc)\n\n\(myActionPlanDesc)\n\n\(whatINeedDesc)"
-        event.url = URL(string: "notepal://page?id=\(viewModel.data.first!.id)")
-        event.startDate = Date()
-        event.endDate = Date().addingTimeInterval(3600) // 1 hour event
-        event.calendar = eventStore.defaultCalendarForNewEvents
+        let event = EKEvent(
+            habit: viewModel.data[0],
+            url: URL(string: "notepal://page?id=\(viewModel.data.first!.id)")!,
+            eventStore: eventStore,
+            calendar: eventStore.defaultCalendarForNewEvents,
+            startDate: Date(),
+            endDate: Date().addingTimeInterval(3600)
+        )
         
-        do {
-            try eventStore.save(event, span: .thisEvent)
-            print("Event saved")
-        } catch let error as NSError {
-            print("Failed to save event with error: \(error)")
-        }
+        selectedEvent = event
     }
+    
+    
     
     var body: some View {
         NavigationStack{
             
-            if let note = viewModel.data.first{
+            if viewModel.data.first != nil {
                 VStack(alignment: .leading) {
                     TextField("", text: $viewModel.data[0].title)
                         .font(.largeTitle)
                         .bold()
                     
-                    Button(action: {
+                    Button(action: { 
+                        createCalendarEvent()
                         requestAccessToCalendar()
                     }, label: {
                         Text("Add to Calendar")
@@ -81,13 +82,14 @@ struct HabitDetailView: View {
                     Text("My Action Plan")
                         .font(.headline)
                     
-                    ForEach($viewModel.data[0].plans){ $list in
+                    ForEach($viewModel.data[0].plans.sorted(by: {$0.id < $1.id})){ $list in
                         Toggle(
                             list.content,
                             isOn: $list.done
                         ).toggleStyle(CheckboxStrikethrough(
-                            text: $list.content,
-                            axis: .vertical
+//                            id: $list.id,
+//                            model: $viewModel.data[0],
+                            text: $list.content
                         ))
                     }
                     
@@ -145,7 +147,7 @@ struct HabitDetailView: View {
                     }
                 }
                 .sheet(isPresented: $showEventEditor) {
-                    EventEditView(eventStore: eventStore, onSave: createCalendarEvent)
+                    EventEditViewController(event: $selectedEvent, eventStore: eventStore)
                 }
             }
             else{
@@ -161,8 +163,9 @@ struct HabitDetailView: View {
                     title: "New Title",
                     goal: "Do what you believe",
                     plan: [
-                        Checklist(content: "Make your action plan"),
-                        Checklist(content: "Another plan"),
+                        Checklist(id: 1, content: "Make your action plan"),
+                        Checklist(id: 2, content: "Another Plan"),
+                        Checklist(id: 3, content: "Specific Plan"),
                     ]
                 )
             
@@ -173,46 +176,3 @@ struct HabitDetailView: View {
         
     }
 }
-
-struct EventEditView: UIViewControllerRepresentable {
-    var eventStore: EKEventStore
-    var event: EKEvent = EKEvent(eventStore: EKEventStore())
-    var onSave: () -> Void
-    
-    func makeUIViewController(context: Context) -> EKEventEditViewController {
-        let controller = EKEventEditViewController()
-        controller.eventStore = eventStore
-        controller.event = event
-        controller.editViewDelegate = context.coordinator
-        return controller
-    }
-    
-    func updateUIViewController(_ uiViewController: EKEventEditViewController, context: Context) {}
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self, onSave: onSave)
-    }
-    
-    class Coordinator: NSObject, EKEventEditViewDelegate {
-        var parent: EventEditView
-        var onSave: () -> Void
-        
-        init(_ parent: EventEditView, onSave: @escaping () -> Void) {
-            self.parent = parent
-            self.onSave = onSave
-        }
-        
-        func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
-            controller.dismiss(animated: true, completion: nil)
-            if action != .canceled {
-                onSave()
-            }
-        }
-    }
-}
-
-//#Preview {
-//    NavigationStack {
-//        HabitDetailView(id: )
-//    }
-//}

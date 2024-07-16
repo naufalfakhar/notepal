@@ -41,6 +41,8 @@
 		A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */; };
 		A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
+		EF062B872C46783200B5CB15 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062B862C46783200B5CB15 /* EventEditViewController.swift */; };
+		EF062B892C4679DB00B5CB15 /* EKEventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062B882C4679DB00B5CB15 /* EKEventExtension.swift */; };
 		EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DE2C455357001448CF /* HabitViewModel.swift */; };
 		EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */; };
 		EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E02C455357001448CF /* NoteViewModel.swift */; };
@@ -112,6 +114,8 @@
 		A7FFB88C2C450BFE00D39B54 /* HabitWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitWidgetExtension.entitlements; sourceTree = "<group>"; };
 		A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDailyWidget.swift; sourceTree = "<group>"; };
 		A7FFB8992C45141500D39B54 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		EF062B862C46783200B5CB15 /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
+		EF062B882C4679DB00B5CB15 /* EKEventExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKEventExtension.swift; sourceTree = "<group>"; };
 		EF4AB5DE2C455357001448CF /* HabitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5E02C455357001448CF /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				EF776CBF2C4125CA00C8D119 /* Views */,
 				730DC5CB2C411D840093F816 /* notepalApp.swift */,
 				730DC5CD2C411D840093F816 /* ContentView.swift */,
+				EF062B862C46783200B5CB15 /* EventEditViewController.swift */,
 				73D4528E2C449178002555DF /* AppDelegate.swift */,
 				A7FFB8992C45141500D39B54 /* Localizable.xcstrings */,
 				730DC5CF2C411D860093F816 /* Assets.xcassets */,
@@ -295,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				EF776D242C412BB200C8D119 /* HabitManager.swift */,
+				EF062B882C4679DB00B5CB15 /* EKEventExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF062B892C4679DB00B5CB15 /* EKEventExtension.swift in Sources */,
 				73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */,
 				07BDD6492C465DCF00691B93 /* NoteRowView.swift in Sources */,
 				07BDD64B2C465DE000691B93 /* NoteListView.swift in Sources */,
@@ -414,6 +421,7 @@
 				EF4AB5E82C462564001448CF /* FolderDetailView.swift in Sources */,
 				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
 				EF776CD72C4129DF00C8D119 /* CheckboxStrikethrough.swift in Sources */,
+				EF062B872C46783200B5CB15 /* EventEditViewController.swift in Sources */,
 				730DC5CE2C411D840093F816 /* ContentView.swift in Sources */,
 				07BDD6452C465D9A00691B93 /* AddNoteSheet.swift in Sources */,
 				A7FFB88A2C450B3A00D39B54 /* LineChartView.swift in Sources */,
