@@ -33,9 +33,6 @@
 		A7FFB88B2C450B3A00D39B54 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8892C450B3A00D39B54 /* LineChartView.swift */; };
 		A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */; };
 		A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */; };
-		A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
-		A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8932C450CB400D39B54 /* HabitCardView.swift */; };
-		A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */; };
 		A7FFB89A2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		A7FFB89B2C45141600D39B54 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A7FFB8992C45141500D39B54 /* Localizable.xcstrings */; };
 		EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5DE2C455357001448CF /* HabitViewModel.swift */; };
@@ -56,8 +53,6 @@
 		EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */; };
 		EF776D222C412B1C00C8D119 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D202C412B1C00C8D119 /* TextView.swift */; };
 		EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D242C412BB200C8D119 /* HabitManager.swift */; };
-		EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */; };
-		EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776D282C412D5B00C8D119 /* SpeechButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,8 +100,6 @@
 		A7FFB8892C450B3A00D39B54 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		A7FFB88C2C450BFE00D39B54 /* HabitWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitWidgetExtension.entitlements; sourceTree = "<group>"; };
 		A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDailyWidget.swift; sourceTree = "<group>"; };
-		A7FFB8932C450CB400D39B54 /* HabitCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardView.swift; sourceTree = "<group>"; };
-		A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitCardViewModel.swift; sourceTree = "<group>"; };
 		A7FFB8992C45141500D39B54 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EF4AB5DE2C455357001448CF /* HabitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5DF2C455357001448CF /* NavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
@@ -127,8 +120,6 @@
 		EF776D1F2C412B1C00C8D119 /* RepeatNoteDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatNoteDialog.swift; sourceTree = "<group>"; };
 		EF776D202C412B1C00C8D119 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		EF776D242C412BB200C8D119 /* HabitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitManager.swift; sourceTree = "<group>"; };
-		EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		EF776D282C412D5B00C8D119 /* SpeechButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */,
-				A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */,
 				A7FFB8732C450AAD00D39B54 /* HabitWidget.swift */,
+				A7FFB88D2C450C7700D39B54 /* HabitDailyWidget.swift */,
 				A7FFB8752C450AAD00D39B54 /* AppIntent.swift */,
 				A7FFB8892C450B3A00D39B54 /* LineChartView.swift */,
 				A7FFB8772C450AAE00D39B54 /* Assets.xcassets */,
@@ -225,7 +216,6 @@
 		EF4AB5DD2C45533F001448CF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A7FFB8962C450CBC00D39B54 /* HabitCardViewModel.swift */,
 				EF4AB5E42C455425001448CF /* FolderViewModel.swift */,
 				EF4AB5DE2C455357001448CF /* HabitViewModel.swift */,
 				EF4AB5E02C455357001448CF /* NoteViewModel.swift */,
@@ -260,8 +250,6 @@
 		EF776D0C2C412A2300C8D119 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A7FFB8932C450CB400D39B54 /* HabitCardView.swift */,
-				EF776D282C412D5B00C8D119 /* SpeechButton.swift */,
 				EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */,
 				737C1C132C4646C6005DFC5C /* HabitCard.swift */,
 			);
@@ -300,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				EF776D242C412BB200C8D119 /* HabitManager.swift */,
-				EF776D252C412BB200C8D119 /* SpeechRecognizer.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -415,8 +402,6 @@
 				EF776D262C412BB200C8D119 /* HabitManager.swift in Sources */,
 				737C1C142C4646C6005DFC5C /* HabitCard.swift in Sources */,
 				EF776CD52C4129D200C8D119 /* FolderModel.swift in Sources */,
-				EF776D292C412D5B00C8D119 /* SpeechButton.swift in Sources */,
-				EF776D272C412BB200C8D119 /* SpeechRecognizer.swift in Sources */,
 				EF4AB5E82C462564001448CF /* FolderDetailView.swift in Sources */,
 				EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */,
 				EF776CD72C4129DF00C8D119 /* CheckboxStrikethrough.swift in Sources */,
@@ -426,13 +411,11 @@
 				EF776D212C412B1C00C8D119 /* RepeatNoteDialog.swift in Sources */,
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
-				A7FFB8972C450CBC00D39B54 /* HabitCardViewModel.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
 				EF776D1D2C412B0F00C8D119 /* NoteView.swift in Sources */,
 				EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */,
 				730DC5CC2C411D840093F816 /* notepalApp.swift in Sources */,
-				A7FFB8942C450CB400D39B54 /* HabitCardView.swift in Sources */,
 				EF776D222C412B1C00C8D119 /* TextView.swift in Sources */,
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
 				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
@@ -449,7 +432,6 @@
 				A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */,
 				A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */,
 				A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */,
-				A7FFB8952C450CB400D39B54 /* HabitCardView.swift in Sources */,
 				A7FFB8742C450AAD00D39B54 /* HabitWidget.swift in Sources */,
 				A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */,
 				A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */,
@@ -604,7 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = 78R4Y86VWA;
+				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -647,7 +629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = 78R4Y86VWA;
+				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
