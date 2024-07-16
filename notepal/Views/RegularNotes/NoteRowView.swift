@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct NoteRowView: View {
-    let note: RegularNote
+    let note: Note
     let context: ModelContext
     
     var body: some View {

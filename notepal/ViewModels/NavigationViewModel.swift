@@ -12,6 +12,7 @@ import Combine
 class NavigationViewModel: ObservableObject {
     enum Destination {
         case home
+        case chart
         case detail(id: String)
     }
     
@@ -23,5 +24,9 @@ class NavigationViewModel: ObservableObject {
     
     func navigateToDetail(with id: String) {
         currentDestination = .detail(id: id)
+    }
+    
+    func navigateToChart(){
+        currentDestination = .chart
     }
 }

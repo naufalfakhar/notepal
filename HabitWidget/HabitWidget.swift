@@ -80,35 +80,43 @@ struct HabitWidgetEntryView: View {
         switch family {
         case .systemSmall:
             CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+                .widgetURL(URL(string:"notepal://view?page=chart"))
         case .systemMedium:
             HStack {
                 CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
                 LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                     .frame(height: 120)
             }
+            .widgetURL(URL(string:"notepal://view?page=chart"))
         case .systemLarge:
             VStack {
                 CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
                 LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                     .frame(height: 120)
             }
+            .widgetURL(URL(string:"notepal://view?page=chart"))
         case .systemExtraLarge:
             VStack {
                 CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
                 LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                     .frame(height: 120)
             }
+            .widgetURL(URL(string:"notepal://view?page=chart"))
         case .accessoryCircular:
             CalculatedView(displayedScheduled: displayedScheduled, displayedDone: displayedDone, displayedMissed: displayedMissed)
+                .widgetURL(URL(string:"notepal://view?page=chart"))
         case .accessoryRectangular:
             LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                 .frame(height: 80)
+                .widgetURL(URL(string:"notepal://view?page=chart"))
         case .accessoryInline:
             LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                 .frame(height: 80)
+                .widgetURL(URL(string:"notepal://view?page=chart"))
         @unknown default:
             LineChartView(habitDataLogs: entry.habitDataLogs, habitLastWeekLogs: entry.habitLastWeekLogs, currentTab: $currentTab)
                 .frame(height: 100)
+                .widgetURL(URL(string:"notepal://view?page=chart"))
         }
     }
 }
