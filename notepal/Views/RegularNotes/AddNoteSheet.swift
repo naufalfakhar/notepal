@@ -5,6 +5,8 @@ struct AddNoteSheet: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
+    @FocusState private var amountIsFocused: Bool
+
     
     @State private var title: String = ""
     @State private var date: Date = .now
@@ -17,11 +19,21 @@ struct AddNoteSheet: View {
                     .padding(20)
                     .font(.title)
                     .bold()
+                    .focused($amountIsFocused)
                 
-                TextField("Write Something", text: $noteBody)
+                TextEditor(text: $noteBody)
                     .padding(.horizontal)
+                    .focused($amountIsFocused)
                 
                 Spacer()
+            }
+            .toolbar
+            {
+                if amountIsFocused {
+                    Button("done") {
+                        amountIsFocused = false
+                    }
+                }
             }
             .navigationTitle("New Note")
             .navigationBarTitleDisplayMode(.inline)

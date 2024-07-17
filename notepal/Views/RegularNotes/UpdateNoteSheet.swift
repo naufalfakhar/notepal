@@ -5,6 +5,7 @@ struct UpdateNoteSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) var context
     @Bindable var note: Note
+    @FocusState private var amountIsFocused: Bool
     
     var body: some View {
         NavigationStack {
@@ -13,11 +14,20 @@ struct UpdateNoteSheet: View {
                     .padding(20)
                     .font(.title)
                     .bold()
+                    .focused($amountIsFocused)
                 
-                TextField("Write Something", text: $note.noteBody)
+                TextEditor (text: $note.noteBody)
                     .padding(.horizontal)
+                    .focused($amountIsFocused)
                 
                 Spacer()
+            }
+            .toolbar{
+                if amountIsFocused {
+                    Button ("done"){
+                        amountIsFocused = false
+                    }
+                }
             }
             .navigationTitle("Update Note")
             .navigationBarTitleDisplayMode(.inline)

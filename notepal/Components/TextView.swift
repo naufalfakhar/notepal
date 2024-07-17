@@ -12,17 +12,20 @@ struct TextView: UIViewRepresentable {
     @Binding var attributedText: NSMutableAttributedString
     @State var allowsEditingTextAttributes: Bool = false
     @State var font: UIFont?
+    @FocusState private var amountIsFocused: Bool
     
     class Coordinator: NSObject, UITextViewDelegate {
         var parent: TextView
 
         init(parent: TextView) {
             self.parent = parent
+
         }
 
         func textViewDidChange(_ textView: UITextView) {
             parent.attributedText = NSMutableAttributedString(attributedString: textView.attributedText)
             print("Text edited")
+            
         }
     }
 

@@ -28,6 +28,7 @@ struct HabitDetailView: View {
 
     @State private var selectedEvent: EKEvent?
     @State private var eventStore = EKEventStore()
+    @FocusState private var amountIsFocused: Bool
     
     func requestAccessToCalendar() {
         eventStore.requestFullAccessToEvents { (granted, error) in
@@ -62,6 +63,7 @@ struct HabitDetailView: View {
                 if viewModel.data.first != nil {
                     VStack(alignment: .leading) {
                         TextField("", text: $viewModel.data[0].title)
+                            .focused($amountIsFocused)
                             .font(.largeTitle)
                             .bold()
                         
@@ -77,7 +79,11 @@ struct HabitDetailView: View {
                         Text("My Goals")
                             .font(.headline)
                         
-                        TextField(text: $viewModel.data[0].goal){}
+                        TextField(text: $viewModel.data[0].goal)
+                        {}
+                            .focused($amountIsFocused)
+            
+
                         
                         Text("My Action Plan")
                             .font(.headline)
@@ -91,7 +97,7 @@ struct HabitDetailView: View {
                                 //                            model: $viewModel.data[0],
                                 text: $list.content
                             ))
-                        }
+                        }.focused($amountIsFocused)
                         
                         Divider()
                         
@@ -106,12 +112,20 @@ struct HabitDetailView: View {
                                     allowsEditingTextAttributes: true,
                                     font: .systemFont(ofSize: 24)
                                 )
+                                .focused($amountIsFocused)
                                 .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
                             }
                             .padding(.vertical)
                         }
                     }
                     .padding()
+                    .toolbar      { if amountIsFocused{
+                        Button("done"){
+                            amountIsFocused = false
+                        }
+                    }
+                    }
+
                     .toolbar {
                         ToolbarItemGroup(placement: .bottomBar) {
                             Button(action: {
