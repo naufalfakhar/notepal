@@ -7,30 +7,10 @@
 
 import SwiftUI
 import SwiftData
-
-struct HabitDataLog {
-    var date: Date
-    var habitCount: Int
-    var scheduled: Int
-    var done: Int
-    var missed: Int
-}
-
-struct HabitData: Identifiable {
-    var id = UUID()
-    var title: String
-}
+import Foundation
 
 class HabitManager: ObservableObject {
     private let lastSavedDateKey = "lastSavedDate"
-    
-    func fetchHabitDaily(data: [Habit]) -> [HabitData] {
-        return [
-            HabitData(title: "Health Habit"),
-            HabitData(title: "Workout Data"),
-            HabitData(title: "Coding Habit")
-        ]
-    }
     
     func fetchHabitLogsForPastWeek(modelContext: ModelContext) -> [HabitDataLog]{
         var logs: [HabitLog] = []
@@ -100,10 +80,13 @@ class HabitManager: ObservableObject {
     }
     
     func checkAndLogHabits(modelContext: ModelContext) {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(identifier: "GMT+7") ?? TimeZone.current
         guard let lastSavedDate = UserDefaults.standard.object(forKey: lastSavedDateKey) as? Date else {
             // If not, set the current date as the last saved date and return
             let currentDate = Date()
-            UserDefaults.standard.set(currentDate, forKey: lastSavedDateKey)
+            let savedDate = calendar.date(byAdding: .day, value: -1, to: currentDate)
+            UserDefaults.standard.set(savedDate, forKey: lastSavedDateKey)
             print("First run, setting last saved date to \(currentDate)")
             return
         }
@@ -111,8 +94,6 @@ class HabitManager: ObservableObject {
         let currentDate = Date()
         print("current date: \(currentDate)")
         print("Last saved date: \(lastSavedDate)")
-        var calendar = Calendar.current
-        calendar.timeZone = TimeZone.current
         
         let strippedLastSavedDate = calendar.startOfDay(for: lastSavedDate)
         let strippedCurrentDate = calendar.startOfDay(for: currentDate)
@@ -140,13 +121,6 @@ class HabitManager: ObservableObject {
 //            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
 //            modelContext.insert(habitData)
 //        }
-//
-//        let healthData = Habit(id: UUID(), title: "Health Habit", goal: "jadi sehat", plan: [Checklist(id: UUID(), content: "makan sehat", done: false)])
-//        let workoutData = Habit(id: UUID(), title: "Workout Habit", goal: "jadi ade ray", plan: [Checklist(id: UUID(), content: "olahraga woy", done: false), Checklist(id: UUID(), content: "makan yang banyak", done: false)])
-//        let codingData = Habit(id: UUID(), title: "Coding Habit", goal: "bisa ngoding", plan: [Checklist(id: UUID(), content: "kerjain challenge woy game mulu", done: false)])
-//        modelContext.insert(healthData)
-//        modelContext.insert(workoutData)
-//        modelContext.insert(codingData)
 
         UserDefaults.standard.set(currentDate, forKey: lastSavedDateKey)
     }
@@ -155,14 +129,25 @@ class HabitManager: ObservableObject {
         do {
             let habits: [Habit] = try modelContext.fetch(FetchDescriptor<Habit>())
             
-            let habitNameLogs = habits.map { $0.title }
-            let habitCompleteLogs = habits.map { $0.isCompleted }
+            var calendar = Calendar.current
+            calendar.timeZone = TimeZone(identifier: "GMT+7") ?? TimeZone.current
             
-            // Create a new log
+            let habitNameLogs = habits.map { $0.title }
+            var habitCompleteLogs = [Bool]()
+            
+            for habit in habits {
+                let hasNoteLogForDate = habit.note.contains { calendar.isDate($0.createdAt, inSameDayAs: date) }
+
+                if hasNoteLogForDate {
+                    habit.isCompleted = true
+                }
+
+                habitCompleteLogs.append(habit.isCompleted)
+            }
+            
             let log = HabitLog(date: date, habitNameLogs: habitNameLogs, habitCompleteLogs: habitCompleteLogs)
             modelContext.insert(log)
 
-            // Reset all habits
             for habit in habits {
                 habit.isCompleted = false
             }

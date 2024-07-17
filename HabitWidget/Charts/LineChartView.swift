@@ -13,19 +13,7 @@ struct LineChartView: View {
     var habitDataLogs: [HabitDataLog]
     var habitLastWeekLogs: [HabitDataLog]
     @Binding var currentTab: CurrentTab
-//    @Environment(\.modelContext) var modelContext
-//    @State private var showModal = false
-//    @State private var selectedDate: Date?
-//    @State private var selectedHabitLog: HabitLog?
-//    @State private var habitLogViewModel: HabitLogViewModel
-    
-//    init(habitDataLogs: [HabitDataLog], habitLastWeekLogs: [HabitDataLog], currentTab: Binding<CurrentTab>, modelContext: ModelContext) {
-//        self.habitDataLogs = habitDataLogs
-//        self.habitLastWeekLogs = habitLastWeekLogs
-//        self._currentTab = currentTab
-//        _habitLogViewModel = State(wrappedValue: HabitLogViewModel(modelContext: modelContext))
-//    }
-
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         VStack {
             Chart {
@@ -40,11 +28,6 @@ struct LineChartView: View {
                             Image(systemName: "circle.fill")
                                 .foregroundColor(.blue)
                                 .font(.system(size: 10))
-//                                .onTapGesture {
-//                                    showModal = true
-//                                    selectedDate = log.date
-//                                    selectedHabitLog = habitLogViewModel.fetchHabitLog(for: selectedDate!)
-//                                }
                         }
                     }
                 } else if currentTab == .lastWeek {
@@ -53,16 +36,11 @@ struct LineChartView: View {
                             x: .value("Day", log.date, unit: .day),
                             y: .value("Habits Done", log.habitCount)
                         )
-                        .foregroundStyle(Color.black)
+                        .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
                         .symbol {
                             Image(systemName: "square.fill")
-                                .foregroundColor(.black)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.system(size: 10))
-//                                .onTapGesture {
-//                                    showModal = true
-//                                    selectedDate = log.date
-//                                    selectedHabitLog = habitLogViewModel.fetchHabitLog(for: selectedDate!)
-//                                }
                         }
                     }
                 } else if currentTab == .comparing {
@@ -73,16 +51,11 @@ struct LineChartView: View {
                             y: .value("Habits Done", log.habitCount),
                             series: .value("This Week", "A")
                         )
-                        .foregroundStyle(Color.black)
+                        .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
                         .symbol {
                             Image(systemName: "square.fill")
-                                .foregroundColor(.black)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.system(size: 10))
-//                                .onTapGesture {
-//                                    showModal = true
-//                                    selectedDate = adjustedDate
-//                                    selectedHabitLog = habitLogViewModel.fetchHabitLog(for: selectedDate!)
-//                                }
                         }
                     }
                     
@@ -97,11 +70,6 @@ struct LineChartView: View {
                             Image(systemName: "circle.fill")
                                 .foregroundColor(.blue)
                                 .font(.system(size: 10))
-//                                .onTapGesture {
-//                                    showModal = true
-//                                    selectedDate = log.date
-//                                    selectedHabitLog = habitLogViewModel.fetchHabitLog(for: selectedDate!)
-//                                }
                         }
                     }
                 }
@@ -124,60 +92,5 @@ struct LineChartView: View {
             }
             .chartYScale(domain: 0...5)
         }
-//        .sheet(isPresented: $showModal) {
-//            if let habitLog = selectedHabitLog {
-//                HabitLogDetailView(habitLog: habitLog)
-//                HabitLogDetailView()
-//            } else {
-//                Text("No data available")
-//                    .font(.title)
-//                    .padding()
-//                Spacer()
-//                Button(action: {
-//                    showModal = false
-//                }) {
-//                    Text("Close")
-//                        .font(.headline)
-//                        .padding()
-//                        .background(Color.blue)
-//                        .foregroundColor(.white)
-//                        .cornerRadius(8)
-//                }
-//                .padding()
-//            }
-//        }
     }
 }
-//
-//struct HabitLogDetailView: View {
-//    var habitLog: HabitLog
-//
-//    var body: some View {
-//        VStack {
-//            Text("Habit Log Details")
-//                .font(.title)
-//            List {
-//                ForEach(Array(zip(habitLog.habitNameLogs, habitLog.habitCompleteLogs)), id: \.0) { habitName, habitComplete in
-//                    HStack {
-//                        Text(habitName)
-//                        Spacer()
-//                        Image(systemName: habitComplete ? "checkmark.circle.fill" : "xmark.circle.fill")
-//                            .foregroundColor(habitComplete ? .green : .red)
-//                    }
-//                }
-//            }
-//            Spacer()
-//            Button(action: {
-//                // dismiss button later
-//            }) {
-//                Text("Close")
-//                    .font(.headline)
-//                    .padding()
-//                    .background(Color.blue)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(8)
-//            }
-//            .padding()
-//        }
-//    }
-//}

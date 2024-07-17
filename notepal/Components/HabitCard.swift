@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HabitCard: View {
     @Binding var habit: Habit
+    @Environment(\.modelContext) var modelContext
+    @StateObject private var habitLogVM = HabitLogViewModel()
+    @State var streakCount: Int = 0
     
     var body: some View {
         HStack {
@@ -16,22 +20,16 @@ struct HabitCard: View {
             Text($habit.title.wrappedValue)
             Spacer()
             ZStack{
-                Image(systemName: "flame")
-                    .font(.system(size: 28))
-                    .foregroundStyle(
-                        .linearGradient(colors: [.orange, .red],
-                                        startPoint: .top,
-                                        endPoint: .bottom))
-                Image(systemName: "flame.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(
-                        .linearGradient(colors: [.orange, .red],
-                                        startPoint: .top,
-                                        endPoint: .bottom))
-                Text("21")
+                FireStreakView(streakCount: streakCount)
+                Text("\(streakCount)")
                     .foregroundStyle(Color.white)
                     .offset(y:2)
             }
+        }
+        .onAppear {
+            habitLogVM.modelContext = modelContext
+            habitLogVM.fetchAll()
+            streakCount = habitLogVM.fetchStreak(title: habit.title)
         }
     }
 }
