@@ -61,7 +61,7 @@ struct LineChartDetailView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .trailing) {
                 HStack {
                     Text("Check Habit Progress")
                         .font(.title3)
@@ -167,6 +167,8 @@ struct LineChartDetailView: View {
                 .font(.footnote)
             }
             .padding()
+            
+            Spacer()
         }
         .navigationTitle("Weekly Analysis")
         .padding()

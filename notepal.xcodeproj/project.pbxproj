@@ -30,6 +30,11 @@
 		A7DF93742C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */; };
 		A7DF93762C466D0900B6A4C7 /* CalculatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */; };
 		A7DF93772C466D0900B6A4C7 /* CalculatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */; };
+		A7DF93792C46CCE700B6A4C7 /* DailyQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF93782C46CCE700B6A4C7 /* DailyQuestView.swift */; };
+		A7DF937C2C476F6900B6A4C7 /* HabitDataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF937B2C476F6900B6A4C7 /* HabitDataLog.swift */; };
+		A7DF937D2C476F6F00B6A4C7 /* HabitDataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF937B2C476F6900B6A4C7 /* HabitDataLog.swift */; };
+		A7DF937F2C476F9000B6A4C7 /* HabitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF937E2C476F9000B6A4C7 /* HabitData.swift */; };
+		A7DF93802C476F9000B6A4C7 /* HabitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF937E2C476F9000B6A4C7 /* HabitData.swift */; };
 		A7FFB86D2C450AAD00D39B54 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */; };
 		A7FFB86F2C450AAD00D39B54 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */; };
 		A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FFB8712C450AAD00D39B54 /* HabitWidgetBundle.swift */; };
@@ -116,6 +121,9 @@
 		A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStreakView.swift; sourceTree = "<group>"; };
 		A7DF93722C466CF600B6A4C7 /* HabitLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLogViewModel.swift; sourceTree = "<group>"; };
 		A7DF93752C466D0900B6A4C7 /* CalculatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedView.swift; sourceTree = "<group>"; };
+		A7DF93782C46CCE700B6A4C7 /* DailyQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestView.swift; sourceTree = "<group>"; };
+		A7DF937B2C476F6900B6A4C7 /* HabitDataLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDataLog.swift; sourceTree = "<group>"; };
+		A7DF937E2C476F9000B6A4C7 /* HabitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitData.swift; sourceTree = "<group>"; };
 		A7FFB86A2C450AAD00D39B54 /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FFB86C2C450AAD00D39B54 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7FFB86E2C450AAD00D39B54 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -323,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				EF776D122C412AB800C8D119 /* HabitView.swift */,
+				A7DF93782C46CCE700B6A4C7 /* DailyQuestView.swift */,
 				73A8FD7C2C43B35F0081E086 /* HabitDetailView.swift */,
 				EF4AB5E72C462564001448CF /* FolderDetailView.swift */,
 			);
@@ -333,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				EF776D242C412BB200C8D119 /* HabitManager.swift */,
+				A7DF937B2C476F6900B6A4C7 /* HabitDataLog.swift */,
+				A7DF937E2C476F9000B6A4C7 /* HabitData.swift */,
 				EF062B882C4679DB00B5CB15 /* EKEventExtension.swift */,
 			);
 			path = Tools;
@@ -463,6 +474,7 @@
 				EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */,
 				EF776D142C412AB800C8D119 /* HabitView.swift in Sources */,
 				EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */,
+				A7DF937C2C476F6900B6A4C7 /* HabitDataLog.swift in Sources */,
 				A7DF93692C466C3F00B6A4C7 /* CurrentTab.swift in Sources */,
 				A7DF93762C466D0900B6A4C7 /* CalculatedView.swift in Sources */,
 				EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */,
@@ -474,10 +486,12 @@
 				EF4AB5E22C455357001448CF /* NavigationViewModel.swift in Sources */,
 				EF4AB5E12C455357001448CF /* HabitViewModel.swift in Sources */,
 				A7DF936D2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */,
+				A7DF93792C46CCE700B6A4C7 /* DailyQuestView.swift in Sources */,
 				A7DF93732C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */,
 				A7FFB88E2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
 				73D4528F2C449178002555DF /* AppDelegate.swift in Sources */,
 				07BDD6432C465D7500691B93 /* RegularNoteView.swift in Sources */,
+				A7DF937F2C476F9000B6A4C7 /* HabitData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +501,7 @@
 			files = (
 				A7FFB8822C450AEC00D39B54 /* HabitModel.swift in Sources */,
 				A7DF936A2C466C3F00B6A4C7 /* CurrentTab.swift in Sources */,
+				A7DF937D2C476F6F00B6A4C7 /* HabitDataLog.swift in Sources */,
 				A7DF936E2C466C9700B6A4C7 /* LineChartDetailView.swift in Sources */,
 				A7FFB8852C450AF400D39B54 /* HabitLogModel.swift in Sources */,
 				A7FFB8812C450AE900D39B54 /* HabitManager.swift in Sources */,
@@ -496,6 +511,7 @@
 				A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */,
 				A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */,
 				A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
+				A7DF93802C476F9000B6A4C7 /* HabitData.swift in Sources */,
 				A7DF93712C466CAA00B6A4C7 /* FireStreakView.swift in Sources */,
 				A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */,
 				A7FFB8882C450AFD00D39B54 /* ChecklistModel.swift in Sources */,
@@ -648,7 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -668,7 +684,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -691,7 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notepal/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -711,7 +727,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -732,7 +748,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HabitWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
@@ -744,7 +760,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepals.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -767,7 +783,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = HQNZ8TWNYS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HabitWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
@@ -779,7 +795,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.notepals.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansen.notepals.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

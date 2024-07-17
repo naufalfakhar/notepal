@@ -70,11 +70,11 @@ struct HabitView: View {
         .searchable(text: $searchValue, prompt: "Search")
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
-                Button(action: {
-                    // TODO: Daily Quest
-                }, label: {
+                NavigationLink {
+                    DailyQuestView()
+                } label: {
                     Image(systemName: "list.bullet")
-                })
+                }
                 NavigationLink {
                     LineChartDetailView()
                 } label: {

@@ -26,9 +26,6 @@
     "%lld" : {
 
     },
-    "21" : {
-
-    },
     "Add Note" : {
 
     },
@@ -100,6 +97,9 @@
           }
         }
       }
+    },
+    "Daily Quest" : {
+
     },
     "Date" : {
       "extractionState" : "stale",

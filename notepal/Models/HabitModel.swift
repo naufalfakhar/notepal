@@ -12,10 +12,10 @@ import SwiftData
 class Habit: Identifiable{
     var id: UUID
     var folderId: UUID?
-    var note: [NoteLog]
     var title: String
     var goal: String
     var plans: [Checklist]
+    var note: [NoteLog]
     var isCompleted: Bool
     
     init(
@@ -24,8 +24,7 @@ class Habit: Identifiable{
         title: String,
         goal: String,
         plan: [Checklist],
-        note: [NoteLog]
-        ,
+        note: [NoteLog],
         isCompleted: Bool = false
     ) {
         self.id = id
