@@ -30,7 +30,7 @@ struct AddNoteSheet: View {
             .toolbar
             {
                 if amountIsFocused {
-                    Button("done") {
+                    Button("Done") {
                         amountIsFocused = false
                     }
                 }

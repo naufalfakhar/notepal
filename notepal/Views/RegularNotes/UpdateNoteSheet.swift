@@ -24,7 +24,7 @@ struct UpdateNoteSheet: View {
             }
             .toolbar{
                 if amountIsFocused {
-                    Button ("done"){
+                    Button ("Done"){
                         amountIsFocused = false
                     }
                 }

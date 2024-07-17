@@ -1,586 +1,711 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "My Notes": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Catatan Saya"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "(" : {
+
+    },
+    ")" : {
+
+    },
+    "%.2f%%" : {
+
+    },
+    "%@%@%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@%%"
           }
         }
       }
     },
-    "Search": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cari"
+    "%lld" : {
+
+    },
+    "1 hour before start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 jam sebelum mulai"
           }
         }
       }
     },
-    "Regular Notes": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Catatan Reguler"
+    "5 minutes before start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 menit sebelum mulai"
           }
         }
       }
     },
-    "Habit Journey": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Habit Journey"
+    "10 minutes before start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 menit sebelum mulai"
           }
         }
       }
     },
-    "Habits": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Habits"
+    "15 minutes before start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15 menit sebelum mulai"
           }
         }
       }
     },
-    "No Habit Notes": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tidak Ada Catatan Habit"
+    "30 minutes before start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 menit sebelum mulai"
           }
         }
       }
     },
-    "My Habit": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Habit Saya"
+    "Add" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah"
           }
         }
       }
     },
-    "Add to Calendar": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tambah ke Kalender"
+    "Add Note" : {
+
+    },
+    "Add to Calendar" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah ke Kalender"
           }
         }
       }
     },
-    "My Goals": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Goals Saya"
+    "Alert" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peringatan"
           }
         }
       }
     },
-    "My Action Plan": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rencana Saya"
+    "All-day" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seharian"
           }
         }
       }
     },
-    "What I Need": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hal yang Saya Butuh"
+    "Cancel" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
           }
         }
       }
     },
-    "Add": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tambah"
+    "Check Habit Progress" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cek Perkembangan Habit"
           }
         }
       }
     },
-    "All-day": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Seharian"
+    "Configuration" : {
+
+    },
+    "Continue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjut"
           }
         }
       }
     },
-    "Starts": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mulai"
+    "Current Week" : {
+
+    },
+    "Custom" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khusus"
           }
         }
       }
     },
-    "Ends": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Berakhir"
+    "Custom Repeat" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khusus"
           }
         }
       }
     },
-    "Repeat": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ulangi"
+    "Daily Habit Limit" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batas Habit Harian"
           }
         }
       }
     },
-    "Alert": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Peringatan"
+    "Daily Quest" : {
+
+    },
+    "Day" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari"
           }
         }
       }
     },
-    "Never": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tidak Pernah"
+    "Delete" : {
+
+    },
+    "Delete From Calendar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Dari Kalender"
           }
         }
       }
     },
-    "None": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tidak Ada"
+    "Done" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
           }
         }
       }
     },
-    "Cancel": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Batal"
+    "Edit Calendar Event" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Peristiwa Kalender"
           }
         }
       }
     },
-    "Edit Calendar Event": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Edit Peristiwa Kalender"
+    "Ends" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berakhir"
           }
         }
       }
     },
-    "Weekly Analysis": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Analisa Mingguan"
+    "Enter folder name" : {
+
+    },
+    "Every" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap"
           }
         }
       }
     },
-    "Check Habit Progress": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cek Perkembangan Habit"
+    "Every Day" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap Hari"
           }
         }
       }
     },
-    "This Week": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Minggu Ini"
+    "Every Month" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap Bulan"
           }
         }
       }
     },
-    "My Habit Progression": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Perkembangan Habit Saya"
+    "Every Week" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap Minggu"
           }
         }
       }
     },
-    "Last Week": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Minggu Lalu"
+    "Every Year" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap Tahun"
           }
         }
       }
     },
-    "Habits Done": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Habit Selesai"
+    "Favorite Emoji" : {
+
+    },
+    "Frequency" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frekuensi"
           }
         }
       }
     },
-    "Day": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hari"
+    "Fri" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jum"
           }
         }
       }
     },
-    "Sun": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ming"
+    "Habit Journey" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habit Journey"
           }
         }
       }
     },
-    "Mon": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sen"
+    "Habit Tracker Widget" : {
+
+    },
+    "Habits" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habits"
           }
         }
       }
     },
-    "Tue": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sel"
+    "Habits Done" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habit Selesai"
           }
         }
       }
     },
-    "Wed": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rab"
+    "Last Week" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu Lalu"
           }
         }
       }
     },
-    "Thu": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kam"
+    "Missed" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terlewat"
           }
         }
       }
     },
-    "Fri": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jum"
+    "Mon" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sen"
           }
         }
       }
     },
-    "Sat": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sab"
+    "My Action Plan" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Saya"
           }
         }
       }
     },
-    "Scheduled": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Terjadwal"
+    "My Goals" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goals Saya"
           }
         }
       }
     },
-    "Done": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Selesai"
+    "My Habit" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habit Saya"
           }
         }
       }
     },
-    "Missed": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Terlewat"
+    "My Habit Progression" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perkembangan Habit Saya"
           }
         }
       }
     },
-    "Rate of Completion": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Persentase Habit Selesai"
+    "My Notes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan Saya"
           }
         }
       }
     },
-    "Frequency": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Frekuensi"
+    "Never" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Pernah"
           }
         }
       }
     },
-    "Every": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Setiap"
+    "New Note" : {
+
+    },
+    "No Habit Notes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada Catatan Habit"
           }
         }
       }
     },
-    "Every Day": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Setiap Hari"
+    "No items yet." : {
+
+    },
+    "No Notes" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada Catatan"
           }
         }
       }
     },
-    "Every Week": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Setiap Minggu"
+    "No Notes with This Id" : {
+
+    },
+    "None" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada"
           }
         }
       }
     },
-    "Every Month": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Setiap Bulan"
+    "Note title" : {
+
+    },
+    "NotePal" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Rate of Completion" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persentase Habit Selesai"
           }
         }
       }
     },
-    "Custom": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khusus"
+    "Rate of completion = " : {
+
+    },
+    "Regular Notes" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan Reguler"
           }
         }
       }
     },
-    "Every Year": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Setiap Tahun"
+    "Repeat" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ulangi"
           }
         }
       }
     },
-    "Custom Repeat": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khusus"
+    "Sat" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sab"
           }
         }
       }
     },
-    "5 minutes before start": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "5 menit sebelum mulai"
+    "Scheduled" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terjadwal"
           }
         }
       }
     },
-    "10 minutes before start": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "10 menit sebelum mulai"
+    "Search" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cari"
           }
         }
       }
     },
-    "15 minutes before start": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "15 menit sebelum mulai"
+    "Select Tab" : {
+
+    },
+    "Start adding notes" : {
+
+    },
+    "Starts" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
           }
         }
       }
     },
-    "30 minutes before start": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "30 menit sebelum mulai"
+    "Sun" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ming"
           }
         }
       }
     },
-    "1 hour before start": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1 jam sebelum mulai"
+    "This is an example widget." : {
+
+    },
+    "This Week" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu Ini"
           }
         }
       }
     },
-    "Daily Habit Limit": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Batas Habit Harian"
+    "Thu" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kam"
           }
         }
       }
     },
-    "Continue": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lanjut"
+    "Title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Judul"
           }
         }
       }
     },
-    "To keep you focused on your current habits, we recommend you to schedule a maximum of three habits each day": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Agar anda dapat fokus pada habit yang sudah ada, kami merekomendasikan anda untuk menjadwalkan maksimal tiga habit per hari"
+    "To keep you focused on your current habits, we recommend you to schedule a maximum of three habits each day" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agar anda dapat fokus pada habit yang sudah ada, kami merekomendasikan anda untuk menjadwalkan maksimal tiga habit per hari"
           }
         }
       }
     },
-    "Title": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Judul"
+    "Tracks the number of habits completed each day for the past week." : {
+
+    },
+    "Tue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sel"
           }
         }
       }
     },
-    "No Notes": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tidak Ada Catatan"
+    "Update Note" : {
+
+    },
+    "Wed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rab"
           }
         }
       }
     },
-    "Delete From Calendar": {
-      "localizations": {
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hapus Dari Kalender"
+    "Weekly Analysis" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analisa Mingguan"
+          }
+        }
+      }
+    },
+    "What I Need" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hal yang Saya Butuh"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

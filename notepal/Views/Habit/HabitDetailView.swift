@@ -120,7 +120,7 @@ struct HabitDetailView: View {
                     }
                     .padding()
                     .toolbar      { if amountIsFocused{
-                        Button("done"){
+                        Button("Done"){
                             amountIsFocused = false
                         }
                     }
