@@ -55,6 +55,19 @@ class HabitViewModel: ObservableObject{
         
     }
     
+    func deleteHabitByFolder(id:String){
+        if let id = UUID(uuidString: id){
+            if let context = modelContext{
+                try? context.delete(model: Habit.self, where: #Predicate{
+                    $0.folderId == id
+                })
+                
+                try? context.save()
+                fetchAll()
+            }
+        }
+    }
+    
 //    Clear all data
 //    func clearAll(){
 //        if let context = modelContext {

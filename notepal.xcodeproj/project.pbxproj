@@ -63,6 +63,10 @@
 		EF4AB5E32C455357001448CF /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E02C455357001448CF /* NoteViewModel.swift */; };
 		EF4AB5E52C455425001448CF /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E42C455425001448CF /* FolderViewModel.swift */; };
 		EF4AB5E82C462564001448CF /* FolderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4AB5E72C462564001448CF /* FolderDetailView.swift */; };
+		EF74C4BF2C47B2BD00103177 /* FlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74C4BE2C47B2BD00103177 /* FlameView.swift */; };
+		EF74C4C02C47B2BD00103177 /* FlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74C4BE2C47B2BD00103177 /* FlameView.swift */; };
+		EF74C4C22C47BB3E00103177 /* DottedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74C4C12C47BB3E00103177 /* DottedList.swift */; };
+		EF74C4C32C47BB3E00103177 /* DottedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74C4C12C47BB3E00103177 /* DottedList.swift */; };
 		EF776CCF2C4129D200C8D119 /* ChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC82C4129D200C8D119 /* ChecklistModel.swift */; };
 		EF776CD02C4129D200C8D119 /* NoteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CC92C4129D200C8D119 /* NoteLogModel.swift */; };
 		EF776CD12C4129D200C8D119 /* HabitCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */; };
@@ -143,6 +147,8 @@
 		EF4AB5E02C455357001448CF /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5E42C455425001448CF /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		EF4AB5E72C462564001448CF /* FolderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailView.swift; sourceTree = "<group>"; };
+		EF74C4BE2C47B2BD00103177 /* FlameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlameView.swift; sourceTree = "<group>"; };
+		EF74C4C12C47BB3E00103177 /* DottedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedList.swift; sourceTree = "<group>"; };
 		EF776CC42C41268B00C8D119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF776CC82C4129D200C8D119 /* ChecklistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistModel.swift; sourceTree = "<group>"; };
 		EF776CC92C4129D200C8D119 /* NoteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteLogModel.swift; sourceTree = "<group>"; };
@@ -296,6 +302,7 @@
 		EF776CBE2C4125C400C8D119 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF74C4C12C47BB3E00103177 /* DottedList.swift */,
 				EF776CC82C4129D200C8D119 /* ChecklistModel.swift */,
 				EF776CCE2C4129D200C8D119 /* FolderModel.swift */,
 				EF776CCA2C4129D200C8D119 /* HabitCategoryModel.swift */,
@@ -321,6 +328,7 @@
 			children = (
 				EF776D202C412B1C00C8D119 /* TextView.swift */,
 				A7DF936F2C466CAA00B6A4C7 /* FireStreakView.swift */,
+				EF74C4BE2C47B2BD00103177 /* FlameView.swift */,
 				EF776CD62C4129DF00C8D119 /* CheckboxStrikethrough.swift */,
 				737C1C132C4646C6005DFC5C /* HabitCard.swift */,
 			);
@@ -455,7 +463,9 @@
 			files = (
 				EF062B892C4679DB00B5CB15 /* EKEventExtension.swift in Sources */,
 				73A8FD7D2C43B35F0081E086 /* HabitDetailView.swift in Sources */,
+				EF74C4BF2C47B2BD00103177 /* FlameView.swift in Sources */,
 				07BDD6492C465DCF00691B93 /* NoteRowView.swift in Sources */,
+				EF74C4C22C47BB3E00103177 /* DottedList.swift in Sources */,
 				07BDD64B2C465DE000691B93 /* NoteListView.swift in Sources */,
 				EF776CD22C4129D200C8D119 /* HabitLogModel.swift in Sources */,
 				EF776CD42C4129D200C8D119 /* NoteModel.swift in Sources */,
@@ -508,12 +518,14 @@
 				A7FFB8872C450AFA00D39B54 /* FolderModel.swift in Sources */,
 				A7DF93772C466D0900B6A4C7 /* CalculatedView.swift in Sources */,
 				A7FFB8742C450AAD00D39B54 /* HabitWidget.swift in Sources */,
+				EF74C4C32C47BB3E00103177 /* DottedList.swift in Sources */,
 				A7FFB8862C450AF700D39B54 /* HabitCategoryModel.swift in Sources */,
 				A7FFB8842C450AF100D39B54 /* NoteModel.swift in Sources */,
 				A7FFB88F2C450C7700D39B54 /* HabitDailyWidget.swift in Sources */,
 				A7DF93802C476F9000B6A4C7 /* HabitData.swift in Sources */,
 				A7DF93712C466CAA00B6A4C7 /* FireStreakView.swift in Sources */,
 				A7FFB8722C450AAD00D39B54 /* HabitWidgetBundle.swift in Sources */,
+				EF74C4C02C47B2BD00103177 /* FlameView.swift in Sources */,
 				A7FFB8882C450AFD00D39B54 /* ChecklistModel.swift in Sources */,
 				A7DF93742C466CF600B6A4C7 /* HabitLogViewModel.swift in Sources */,
 				A7FFB8832C450AEF00D39B54 /* NoteLogModel.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FolderDetailView: View {
     
-    var id: String
+    var id: String?
     @Environment(\.modelContext) var modelContext
     
     @StateObject private var habitVM = HabitViewModel()
@@ -42,7 +42,26 @@ struct FolderDetailView: View {
                     .listSectionSpacing(.compact)
                 }
                 else{
-                    
+                    List {
+                        ForEach($habitVM.data.filter{$0.wrappedValue.folderId == nil}) { habit in
+                            Section {
+                                NavigationLink {
+                                    HabitDetailView(id: habit.id.uuidString)
+                                        .toolbarRole(.editor)
+                                        .navigationBarTitleDisplayMode(.inline)
+                                } label: {
+                                    HabitCard(habit: habit)
+                                }
+                            }.swipeActions {
+                                Button(role: .destructive, action: {
+                                    habitVM.deleteHabit(id: habit.id.wrappedValue.uuidString)
+                                }, label: {
+                                    Label("Delete", systemImage: "trash")
+                                })
+                            }
+                        }
+                    }
+                    .listSectionSpacing(.compact)
                 }
                 
             } else {
@@ -50,8 +69,8 @@ struct FolderDetailView: View {
                     .foregroundColor(.gray)
             }
         }
-        .navigationTitle(folderVM.data.first?.title ?? "Habit Journey")
-        .searchable(text: $searchValue, prompt: "Search")
+        .navigationTitle(folderVM.data.first?.title ?? "Personal")
+        .searchable(text: $searchValue, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search")
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                 // Add Folder
@@ -64,6 +83,7 @@ struct FolderDetailView: View {
                 NavigationLink {
                     HabitDetailView(folderId: folderVM.data.first?.id.uuidString)
                         .toolbarRole(.editor)
+                        .navigationBarTitleDisplayMode(.inline)
                 } label: {
                     Image(systemName: "square.and.pencil")
                 }
@@ -73,7 +93,9 @@ struct FolderDetailView: View {
             habitVM.modelContext = modelContext
             folderVM.modelContext = modelContext
             
-            folderVM.fetchById(id: id)
+            if id != nil {
+                folderVM.fetchById(id: id!)
+            }
             habitVM.fetchAll()
             
         }

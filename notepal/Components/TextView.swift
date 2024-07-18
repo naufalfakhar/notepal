@@ -13,6 +13,8 @@ struct TextView: UIViewRepresentable {
     @State var allowsEditingTextAttributes: Bool = false
     @State var font: UIFont?
     @FocusState private var amountIsFocused: Bool
+    @Environment(\.colorScheme) var colorScheme
+
     
     class Coordinator: NSObject, UITextViewDelegate {
         var parent: TextView
@@ -44,6 +46,13 @@ struct TextView: UIViewRepresentable {
         uiView.attributedText = attributedText
         uiView.allowsEditingTextAttributes = allowsEditingTextAttributes
         uiView.font = font
+        
+        
+        // Update text color based on the current color scheme
+        let textColor: UIColor = colorScheme == .dark ? .white : .black
+        let range = NSRange(location: 0, length: attributedText.length)
+        attributedText.addAttribute(.foregroundColor, value: textColor, range: range)
+        uiView.attributedText = attributedText
         
         print("UI Updated")
     }

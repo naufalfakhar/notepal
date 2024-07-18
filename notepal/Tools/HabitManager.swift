@@ -110,17 +110,17 @@ class HabitManager: ObservableObject {
             UserDefaults.standard.set(nextDate, forKey: lastSavedDateKey)
         }
         
-//        for i in 1...7 {
-//            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i, to: currentDate)!
-//            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
-//            modelContext.insert(habitData)
-//        }
-//
-//        for i in 1...7 {
-//            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i - 7, to: currentDate)!
-//            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
-//            modelContext.insert(habitData)
-//        }
+        for i in 1...7 {
+            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i, to: currentDate)!
+            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
+            modelContext.insert(habitData)
+        }
+
+        for i in 1...7 {
+            let oneWeekBeforeDate = calendar.date(byAdding: .day, value: -i - 7, to: currentDate)!
+            let habitData = HabitLog(date: oneWeekBeforeDate, habitNameLogs: ["Health Habit", "Workout Habit", "Coding Habit"], habitCompleteLogs: [Bool.random(), Bool.random(), Bool.random()])
+            modelContext.insert(habitData)
+        }
 
         UserDefaults.standard.set(currentDate, forKey: lastSavedDateKey)
     }

@@ -10,12 +10,14 @@ import SwiftData
 
 @Model
 class Checklist: Identifiable  {
-    var id: Int
+    var id: UUID
+    var index: Int
     var content: String
     var done: Bool
     
-    init(id: Int, content: String, done: Bool = false) {
+    init(var id: UUID = UUID(), index: Int, content: String, done: Bool = false) {
         self.id = id
+        self.index = index
         self.content = content
         self.done = done
     }

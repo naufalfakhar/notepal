@@ -18,6 +18,7 @@ struct MyNotesApp: App {
             HabitCategory.self,
             Habit.self,
             Folder.self,
+            DottedList.self,
             Checklist.self,
             HabitLog.self
         ])

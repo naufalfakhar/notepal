@@ -8,9 +8,7 @@ struct NoteRowView: View {
     var body: some View {
         NavigationLink(destination: UpdateNoteSheet(note: note)) {
             VStack(alignment: .leading) {
-                Text(note.title)
-                    .foregroundColor(.black)
-                    .font(.headline)
+                Text(note.title)                    .font(.headline)
                     .bold()
                 Text(note.noteBody)
                     .font(.body)

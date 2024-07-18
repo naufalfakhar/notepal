@@ -20,60 +20,54 @@ struct HabitView: View {
     
     var body: some View {
         VStack {
-            if !$habitVM.data.isEmpty || !$folderVM.data.isEmpty {
+            
                 List {
-                    ForEach($folderVM.data) { folder in
-                        Section {
-                            NavigationLink {
-                                FolderDetailView(id: folder.id.uuidString)
-                            } label: {
-                                HStack {
-                                    Image(systemName: "folder")
-                                    Text(folder.title.wrappedValue)
+                    Section {
+                        NavigationLink {
+                            FolderDetailView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "folder")
+                                Text("Personal")
+                            }
+                        }
+                    }
+                    
+                    if !$folderVM.data.isEmpty {
+                        ForEach($folderVM.data) { folder in
+                            Section {
+                                NavigationLink {
+                                    FolderDetailView(id: folder.id.uuidString)
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "folder")
+                                        Text(folder.title.wrappedValue)
+                                    }
                                 }
                             }
-                        }
-                        .swipeActions {
-                            Button(role: .destructive, action: {
-                                folderVM.deleteFolder(id: folder.id.wrappedValue.uuidString)
-                            }, label: {
-                                Label("Delete", systemImage: "trash")
-                            })
-                        }
-                    }
-                    ForEach($habitVM.data.filter{$0.wrappedValue.folderId == nil}) { habit in
-                        Section {
-                            NavigationLink {
-                                HabitDetailView(id: habit.id.uuidString)
-                                    .toolbarRole(.editor)
-                                    .navigationBarTitleDisplayMode(.inline)
-                            } label: {
-                                HabitCard(habit: habit)
+                            .swipeActions {
+                                Button(role: .destructive, action: {
+                                    habitVM.deleteHabitByFolder(id: folder.id.wrappedValue.uuidString)
+                                    folderVM.deleteFolder(id: folder.id.wrappedValue.uuidString)
+                                }, label: {
+                                    Label("Delete", systemImage: "trash")
+                                })
                             }
                         }
-                        .swipeActions {
-                            Button(role: .destructive, action: {
-                                habitVM.deleteHabit(id: habit.id.wrappedValue.uuidString)
-                            }, label: {
-                                Label("Delete", systemImage: "trash")
-                            })
-                        }
                     }
+                    else {}
                 }
                 .listSectionSpacing(.compact)
-            } else {
-                Text("No items yet.")
-                    .foregroundColor(.gray)
-            }
+            
         }
         .navigationTitle("Habit Journey")
-        .searchable(text: $searchValue, prompt: "Search")
+        .searchable(text: $searchValue, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search")
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 NavigationLink {
                     DailyQuestView()
                 } label: {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "list.bullet.clipboard")
                 }
                 NavigationLink {
                     LineChartDetailView()
@@ -96,7 +90,7 @@ struct HabitView: View {
                 }
             }
         }
-        .sheet(isPresented: $showCreateSheet, content: {
+        .sheet(isPresented: $showCreateSheet) {
             NavigationStack{
                 VStack {
                     TextField("Enter folder name", text: $folderTitleInput)
@@ -106,11 +100,11 @@ struct HabitView: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
+                        Button{
                             showCreateSheet = false
-                        }, label: {
+                        } label: {
                             Text("Cancel")
-                        })
+                        }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
@@ -124,7 +118,7 @@ struct HabitView: View {
                 }
             }
             
-        })
+        }
         .onAppear {
             habitVM.modelContext = modelContext
             folderVM.modelContext = modelContext

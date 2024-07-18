@@ -43,8 +43,8 @@ struct ContentView: View {
                 }
                 .listSectionSpacing(.compact)
                 .navigationTitle("NotePal")
-                .searchable(text: $searchValue, prompt: "Search")
-                
+                .searchable(text: $searchValue, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search")
+
                 case .detail(let data):
                     HabitDetailView(id: data)
                     .navigationBarTitleDisplayMode(.inline)

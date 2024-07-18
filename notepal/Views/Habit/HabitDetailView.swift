@@ -29,6 +29,7 @@ struct HabitDetailView: View {
     @State private var selectedEvent: EKEvent?
     @State private var eventStore = EKEventStore()
     @FocusState private var amountIsFocused: Bool
+    @Environment(\.colorScheme) var colorScheme
     
     func requestAccessToCalendar() {
         eventStore.requestFullAccessToEvents { (granted, error) in
@@ -88,15 +89,49 @@ struct HabitDetailView: View {
                         Text("My Action Plan")
                             .font(.headline)
                         
+//                        ForEach($viewModel.data[0].needs.sorted(by: {$0.id < $1.id})){ $list in
+//                            Toggle(
+//                                list.content,
+//                                isOn: $list.done
+//                            ).toggleStyle(CheckboxStrikethrough(
+//                                //                            id: $list.id,
+//                                //                            model: $viewModel.data[0],
+//                                text: $list.content
+//                            ))
+//                        }.focused($amountIsFocused)
                         ForEach($viewModel.data[0].plans.sorted(by: {$0.id < $1.id})){ $list in
-                            Toggle(
-                                list.content,
-                                isOn: $list.done
-                            ).toggleStyle(CheckboxStrikethrough(
-                                //                            id: $list.id,
-                                //                            model: $viewModel.data[0],
-                                text: $list.content
-                            ))
+                            HStack(alignment: .top){
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 8))
+                                    .frame(
+                                        width: 20,
+                                        height: 20,
+                                        alignment: Alignment(
+                                            horizontal: .center,
+                                            vertical: .center)
+                                    )
+                                TextField(text: $list.content, axis: Axis.vertical){}
+                                    .focused($amountIsFocused)
+                             }
+                        }.focused($amountIsFocused)
+                        
+                        
+                        Text("My Needs")
+                            .font(.headline)
+                        
+                        ForEach($viewModel.data[0].needs.sorted(by: {$0.id < $1.id})){ $list in
+                            HStack(alignment: .top){
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 8))
+                                    .frame(
+                                        width: 20,
+                                        height: 20,
+                                        alignment: Alignment(
+                                            horizontal: .center,
+                                            vertical: .center)
+                                    )
+                                TextField(text: $list.content, axis: Axis.vertical){}                                    .focused($amountIsFocused)
+                             }
                         }.focused($amountIsFocused)
                         
                         Divider()
@@ -110,7 +145,7 @@ struct HabitDetailView: View {
                                 TextView(
                                     attributedText: $note.content,
                                     allowsEditingTextAttributes: true,
-                                    font: .systemFont(ofSize: 24)
+                                    font: .systemFont(ofSize: 18)
                                 )
                                 .focused($amountIsFocused)
                                 .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
@@ -177,10 +212,15 @@ struct HabitDetailView: View {
                     folderId: folderId != nil ? UUID(uuidString: folderId!) : nil,
                     title: "New Title",
                     goal: "Do what you believe",
-                    plan: [
-                        Checklist(id: 1, content: "Make your action plan"),
-                        Checklist(id: 2, content: "Another Plan"),
-                        Checklist(id: 3, content: "Specific Plan"),
+                    plans: [
+                        DottedList(content: "Make your action plan"),
+                        DottedList(content: "Another Plan"),
+                        DottedList(content: "Specific Plan"),
+                    ],
+                    needs: [
+                        DottedList(content: "What do you need to accomplish this habit?"),
+                        DottedList(content: "What do you need to accomplish this habit?"),
+                        DottedList(content: "What do you need to accomplish this habit?"),
                     ],
                     note: [
                         NoteLog()

@@ -14,7 +14,8 @@ class Habit: Identifiable{
     var folderId: UUID?
     var title: String
     var goal: String
-    var plans: [Checklist]
+    var plans: [DottedList]
+    var needs: [DottedList]
     var note: [NoteLog]
     var isCompleted: Bool
     
@@ -23,7 +24,9 @@ class Habit: Identifiable{
         folderId: UUID? = nil,
         title: String,
         goal: String,
-        plan: [Checklist],
+//        plan: [Checklist],
+        plans: [DottedList],
+        needs: [DottedList],
         note: [NoteLog],
         isCompleted: Bool = false
     ) {
@@ -31,7 +34,8 @@ class Habit: Identifiable{
         self.folderId = folderId
         self.title = title
         self.goal = goal
-        self.plans = plan
+        self.plans = plans
+        self.needs = needs
         self.note = note
         self.isCompleted = isCompleted
     }

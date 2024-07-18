@@ -22,6 +22,7 @@ struct LineChartDetailView: View {
     let habitManager = HabitManager()
     @State private var currentTab: CurrentTab = .thisWeek
     @Environment(\.modelContext) var modelContext
+    @Environment(\.colorScheme) var colorScheme
     
     var displayedScheduled: Int {
         switch currentTab {
@@ -89,10 +90,10 @@ struct LineChartDetailView: View {
                        .font(.subheadline)
                    
                    Rectangle()
-                       .foregroundColor(.black)
+                       .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                        .frame(width: 10, height: 10)
                    Text("Last Week")
-                       .foregroundColor(.black)
+                       .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                        .font(.subheadline)
                    
                    Spacer()
